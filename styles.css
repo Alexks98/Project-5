@@ -31,10 +31,15 @@ nav{
     display: inline-block;
     padding: 8px 16px;
     position: relative;
+    
 }
+
 .nav-links ul li a{
     color: white;
     text-decoration: none;
+}
+.nav-links ul li a:hover {
+    color: #3ECD58; 
 }
 .logo{
     max-width: 150px;
@@ -51,8 +56,9 @@ nav{
     color: white;
     text-decoration: none;
     margin-left: 20px;
-
-
+}
+.icon-links a:hover {
+    color: #3ECD58; 
 }
 .banner-text-box{
     color: #009530;
@@ -199,7 +205,7 @@ nav{
     border-radius: 5px;
     cursor: pointer;
 }
-/* --Ny sektion: Hvem er vi-- */
+/* --Hvem er vi-- */
 
 .about-us {
     padding: 50px 90px;
@@ -245,24 +251,29 @@ nav{
     border: none;
     background: none;
     padding: 0;
+    transition: transform 1s;
 }
 
 .learn-more-btn i {
     margin-left: 5px;
 }
 
+.learn-more-btn:hover {
+    transform: scale(1.1); 
+}
+
 .about-image {
     flex: 1;
     position: relative; /* Gør det muligt at placere den grønne boks */
-    max-width: 40%; /* Gør billedet smallere */
+    max-width: 40%; 
 }
 
 .about-image img {
     width: 100%;
     height: 350px;
     display: block;
-    border-top-left-radius: 10px; /* Afrundede øvre hjørner på billedet */
-    border-top-right-radius: 10px; /* Afrundede øvre hjørner på billedet */
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
 }
 
 
@@ -271,7 +282,7 @@ nav{
     bottom: -20px; /* Få boksen til at stikke ud nedenfor billedet */
     width: 100% ;
     height: 40px;
-    background-color: #3dcd579b; /* Grøn farve med gennemsigtighed */
+    background-color: #3dcd579b; 
     z-index: 1; /* Lægger boksen ovenpå billedet */
     
 }
@@ -280,13 +291,13 @@ nav{
 .energy-solutions {
     padding: 50px 90px;
     background-color: #F3F2F2;
-    text-align: center;
+    text-align: left;
 }
 
 .energy-solutions h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    padding-right: 150px;
+
 }
 
 .solutions-container {
@@ -322,4 +333,95 @@ nav{
 .solution-box p {
     font-size: 1em;
     color: #666;
+}
+
+/*---------innovativeløsninger---------*/
+.innovative-solutions {
+    padding: 50px 90px;
+    background-color: #F3F2F2;
+    text-align: left;
+}
+
+.innovative-solutions h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-right: 150px;
+}
+.innovative-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0;
+    border-radius: 10px; 
+    background-color: #fff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Dropshadow-effekt */
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0;
+    border-radius: 10px; 
+    background-color: #fff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.box img {
+    max-width: 40%;
+    height: auto;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px;
+}
+.box2 img {
+    max-width: 40%;
+    height: auto;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px;
+}
+.box .text {
+    max-width: 50%;
+}
+
+.box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+}
+.box2 .text {
+    max-width: 50%;
+}
+
+.box2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box2 p {
+    font-size: 12px;
+}
+.green-overlay2 {
+    position: absolute;
+    width: 40px ;
+    height: 290px;
+    left: 505px;
+    background-color: #3dcd579b; 
+    z-index: 1; 
+}
+.green-overlay3 {
+    position: absolute;
+    width: 40px ;
+    height: 290px;
+    right: 505px;
+    background-color: #3dcd579b; 
+    z-index: 1; 
 }
