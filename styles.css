@@ -1,39 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .header {
     min-height: 100vh;
     max-height: 100%;
     width: 100%;
-    background-image:  url(img/forside-banner.jpg) ;
+    background-image: url(img/forside-banner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    background-position-y: top;   
-} 
-nav{
+    background-position-y: top;
+}
+
+nav {
     display: flex;
-    padding: 0;
     justify-content: space-between;
     align-items: center;
     background-color: #363636;
+    height: auto; /* Sæt menubarens højde */
+    padding: 0 20px;
 }
-.nav-links{
+
+.logo-container {
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.nav-links {
     flex: 1;
     text-align: left;
 }
-.nav-links ul li{
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
     list-style: none;
-    display: inline-block;
-    padding: 8px 16px;
-    position: relative;
 }
-.nav-links ul li a{
+
+.nav-links ul li {
+    padding: 0 16px;
+}
+
+.nav-links ul li a {
     color: white;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.icon-links {
+    display: flex;
+    align-items: center;
+}
+
+.icon-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+
 }
 .logo{
     max-width: 150px;
@@ -83,7 +118,15 @@ nav{
     display: block;
 }
 
-.lk-logo, .asco-logo, .apc-logo {
+.lk-logo{
+    width: 200px;
+    height: auto;
+}
+.asco-logo{
+    width: 200px;
+    height: auto;
+} 
+.apc-logo {
     width: 150px;
     height: auto;
 }
