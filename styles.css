@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image:  url(img/forside-banner.jpg) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-position-y: top;   
+} 
+nav{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363636;
+}
+.nav-links{
+    flex: 1;
+    text-align: left;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    max-width: 150px;
+    height: auto;    
+    align-self: baseline;
+}
+.banner-text-box{
+    color: #009530;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+
+.banner-text-box p{
+    color: #009530;
+}
+/*--Partners-box--*/
+.container {
+    width: 100%;
+    overflow:hidden;
+    margin-top: 400px;
+}
+  
+.partners-box {
+    background-color: #f3f2f2d4;
+    height: 130px;
+    margin-bottom: 0px;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%; 
+    padding: 2% 2%;
+}
+
+.grid-item {
+    width: 100px;
+}
+
+.by-schneider-logo{
+    width: 50%;
+    max-width: 70px;
+    height: auto;
+    margin-top: 2%;
+}
+
+.lk-logo{
+    width: 50%;
+    max-width: 70px;
+    height: auto;
+    margin-top: 2%;
+}
+
+.asco-logo{
+    width: 50%;
+    max-width: 70px;
+    height: auto;
+    margin-top: 2%;
+}
+
+.apc-logo{
+    width: 50%;
+    height: auto;
+    max-width: 70px;
+    margin-top: 2%;
+}
