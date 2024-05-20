@@ -53,16 +53,16 @@ nav{
     color: #009530;
 }
 /*--Partners-box--*/
-.container {
-    width: 100%;
-    overflow:hidden;
-    margin-top: 500px;
-}
+
   
 .partners-box {
     background-color: #f3f2f2d4;
     height: 110px;
-    margin-bottom: 0px;  
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .grid {
     display: flex;
