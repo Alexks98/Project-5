@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt 5</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 
 </head>
 <body>
@@ -36,7 +37,6 @@
                 <a href="#"><i class="fas fa-map-marker-alt"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
             </div>
-            
         </nav>
      
         <div class="banner-text-box">
@@ -45,6 +45,28 @@
             <p>INNOVATIVE ENERGI-</p>
             <p> OG AUTOMATIONSLØSNINGER</p>
         </div>
+
+        <div class="chatbox-toggle chatbox">
+            <p>24/7 Live Support AI Chat</p>
+        </div>
+        
+        <!-- Chat box content -->
+        <div class="chatbox-content">
+            <div class="chatbox-header">
+                <h4>Live Support AI Chat</h4>
+                <button class="chatbox-close">&times;</button>
+            </div>
+            <div class="chatbox-messages">
+                <!-- Messages will go here -->
+            </div>
+            <div class="chatbox-input">
+                <input type="text" id="chat-input" placeholder="Skriv en besked...">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </section>
+        
+        <script src="chatbox.js"></script>
 
 <div class="container">
     <div class="partners-box">
@@ -67,6 +89,56 @@
       </div>
     </div>
   </div>         
-    </section>
-
-    <!--Partners-box-->
+  </section>
+  
+    
+<!-- Ny sektion: Hvem er vi -->
+<section class="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Hvem er vi?</h2>
+            <p>
+                Vi er specialister i energioptimering og tilbyder 
+                automatiseringsløsninger og energioptimering til alle typer af virksomheder og bygninger. Fra proces- og 
+                produktionsanlæg til kontorhuse, datacentre, kraftværker, hospitaler og private hjem.
+            </p>
+            <p>
+                Vores mission er at give alle mulighed for at udnytte vores 
+                energi og ressourcer bedst muligt, og sikre at Life Is On 
+                overalt, for alle, til enhver tid. 
+            </p>
+            <a href="#" class="learn-more-btn">Få mere at vide <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="about-image">
+            <img src="img/hvem-er-vi.jpg" alt="Hvem er vi billede">
+            <div class="green-overlay"></div>
+        </div>
+    </div>
+</section>
+<section class="energy-solutions">
+    <h2>Avancerede Energiløsninger og Automatisering</h2>
+    <div class="solutions-container">
+        <div class="solution-box">
+            <div class="solution-icon">
+                <img src="img/energy-technology-icon.png" alt="Energy Technology Icon">
+            </div>
+            <h3>Verdensførende Energiteknologier</h3>
+            <p>Vi tilbyder energiteknologier, der fremmer bæredygtighed og effektiv energistyring. Innovative løsninger optimerer energidistributionen og understøtter en renere energifremtid.</p>
+        </div>
+        <div class="solution-box">
+            <div class="solution-icon">
+                <img src="img/realtime-automation-icon.png" alt="Realtime Automation Icon">
+            </div>
+            <h3>Realtids Automatisering</h3>
+            <p>Automatiseringssystemer, der forbedrer effektiviteten og præcisionen i industrielle processer. Vores løsninger muliggør realtidskontrol og overvågning for optimal ydeevne.</p>
+        </div>
+        <div class="solution-box">
+            <div class="solution-icon">
+                <img src="img/software-services-icon.png" alt="Software Services Icon">
+            </div>
+            <h3>Software Og Tjenester</h3>
+            <p>Softwareløsninger, der forbedrer energistyring og automatisering. En bred vifte af tjenester, herunder rådgivning, installation og vedligeholdelse, for at sikre optimal systemdrift.</p>
+        </div>
+    </div>
+</section>
+</body>
