@@ -6,6 +6,7 @@
 
 .header {
     min-height: 100vh;
+    max-height: 100%;
     width: 100%;
     background-image:  url(img/forside-banner.jpg) ;
     background-position: center;
@@ -60,45 +61,28 @@ nav{
   
 .partners-box {
     background-color: #f3f2f2d4;
-    height: 130px;
-    margin-bottom: 0px;
+    height: 110px;
+    margin-bottom: 0px;  
 }
-  
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2%; 
-    padding: 2% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Tilføj en lille margin mellem linjerne */
 }
 
 .grid-item {
-    width: 100px;
+    text-align: center;
+    padding: 0 100px;
 }
 
-.by-schneider-logo{
-    width: 50%;
-    max-width: 70px;
-    height: auto;
-    margin-top: 2%;
+.by-schneider-logo {
+    max-width: 300px;
+    margin: auto;
+    display: block;
 }
 
-.lk-logo{
-    width: 50%;
-    max-width: 70px;
+.lk-logo, .asco-logo, .apc-logo {
+    width: 150px;
     height: auto;
-    margin-top: 2%;
-}
-
-.asco-logo{
-    width: 50%;
-    max-width: 70px;
-    height: auto;
-    margin-top: 2%;
-}
-
-.apc-logo{
-    width: 50%;
-    height: auto;
-    max-width: 70px;
-    margin-top: 2%;
 }
