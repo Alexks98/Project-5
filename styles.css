@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0 ;
+    padding: 0 ;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -208,7 +208,9 @@ nav{
 /* --Hvem er vi-- */
 
 .about-us {
-    padding: 50px 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: auto;
     background-color: #ffffff;
 
 }
@@ -345,7 +347,6 @@ nav{
 .innovative-solutions h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    padding-right: 150px;
 }
 .innovative-container {
     display: flex;
@@ -424,4 +425,8 @@ nav{
     right: 505px;
     background-color: #3dcd579b; 
     z-index: 1; 
+}
+main{
+    padding: 0 20px;
+    background-color: #F3F2F2;
 }
