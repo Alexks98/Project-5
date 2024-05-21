@@ -291,7 +291,7 @@ main{
 
 /*---------------energy solution-----*/
 .energy-solutions {
-    padding: 50px 90px;
+    padding: 50px 0;
     background-color: #F3F2F2;
     text-align: left;
 }
@@ -339,7 +339,7 @@ main{
 
 /*---------innovativeløsninger---------*/
 .innovative-solutions {
-    padding: 50px 90px;
+    padding: 50px 0;
     background-color: #F3F2F2;
     text-align: left;
 }
