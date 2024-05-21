@@ -570,6 +570,16 @@ footer {
 
 
 /* Support section */
+.header-support {
+    min-height: 80vh;
+    max-height: 100%;
+    width: 100%;
+    background-image:  url(img/support-banner.jpg) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-position-y: top;   
+} 
 .support-section {
     padding: 50px 8%;
     text-align: center;
