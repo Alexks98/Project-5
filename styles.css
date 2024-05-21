@@ -5,7 +5,7 @@
 }
 
 .header {
-    min-height: 100vh;
+    min-height: 90vh;
     max-height: 100%;
     width: 100%;
     background-image:  url(img/forside-banner.jpg) ;
@@ -74,13 +74,13 @@ nav{
 }
 /*--Partners-box--*/
 
-  
+
 .partners-box {
     background-color: #f3f2f2d4;
     height: 110px;
     margin-bottom: 0px;
     position: absolute;
-    bottom: 0;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
