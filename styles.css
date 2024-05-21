@@ -298,7 +298,7 @@ nav{
 .about-image {
     flex: 1;
     position: relative; /* Gør det muligt at placere den grønne boks */
-    padding: 80px 0 50px 0px;
+    padding: 5% 0 50px 0px;
     margin-left: 5%;
 }
 
