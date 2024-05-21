@@ -5,7 +5,7 @@
 }
 
 .header {
-    min-height: 90vh;
+    min-height: 80vh;
     max-height: 100%;
     width: 100%;
     background-image:  url(img/forside-banner.jpg) ;
@@ -76,11 +76,11 @@ nav{
 
 
 .partners-box {
-    background-color: #f3f2f2d4;
+    background-color: #f3f2f2b9;
     height: 110px;
     margin-bottom: 0px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 20vh;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -104,7 +104,7 @@ nav{
 }
 
 .lk-logo{
-    width: 150px;
+    width: 250px;
     height: auto;
 }
 .asco-logo{
