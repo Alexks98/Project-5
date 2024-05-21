@@ -225,7 +225,6 @@ main{
 
 .about-text {
     flex: 1;
-  
 }
 
 .about-text h2 {
@@ -304,7 +303,6 @@ main{
 .solutions-container {
     display: flex;
     justify-content: center;
-    gap: 80px;
     flex-wrap: wrap;
 }
 
@@ -313,10 +311,10 @@ main{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 250px;
+    max-width: 40%;
     text-align: center;
     flex: 1;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .solution-icon img {
