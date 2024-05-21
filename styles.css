@@ -569,7 +569,7 @@ footer {
 
 
 
-/* Support section */
+/* Support Page Stylig */
 .header-support {
     min-height: 80vh;
     max-height: 100%;
@@ -590,6 +590,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .support-btn {
@@ -599,9 +600,10 @@ footer {
     color: #009530;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 0 10px;
     font-size: 1.2em;
     border-radius: 5px;
+    position: relative;
+    z-index: 1;
 }
 
 .support-btn.active,
