@@ -221,7 +221,6 @@ nav{
 .about-text {
     flex: 1;
     padding: 20px;
-    margin-right: 60px;
 }
 
 .about-text h2 {
@@ -262,6 +261,7 @@ nav{
     flex: 1;
     position: relative; /* Gør det muligt at placere den grønne boks */
     max-width: 40%; 
+    padding: 20px;
 }
 
 .about-image img {
