@@ -241,6 +241,39 @@ nav{
     margin-bottom: 20px; /* Tilføjer afstand mellem afsnit */
 }
 
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    justify-content: flex-start;
+}
+
+.action-button {
+    width: calc(50% - 10px); /* Ens bredde til alle knapper */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #333;
+    background-color: #F3F2F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #e2e2e2;
+}
+
+
+.button-group .action-button:nth-child(5) {
+    width: calc(50% - 10px);
+    align-self: center; /* Centrerer den femte knap */
+  
+}
+
 .learn-more-btn {
     font-size: 0.9em;
     color: gray;
@@ -265,8 +298,8 @@ nav{
 .about-image {
     flex: 1;
     position: relative; /* Gør det muligt at placere den grønne boks */
-    max-width: 40%; 
-    padding: 50px;
+    padding: 80px 0 50px 0px;
+    margin-left: 5%;
 }
 
 .about-image img {
@@ -281,13 +314,12 @@ nav{
 .green-overlay {
     position: absolute;
     bottom: 30px; /* Få boksen til at stikke ud nedenfor billedet */
-    width: 81% ;
+    width: 100%; /* Tilpas bredden til 100% af billedets bredde */
     height: 40px;
     background-color: #3dcd579b; 
     z-index: 1; /* Lægger boksen ovenpå billedet */
     
 }
-
 /*---------------energy solution-----*/
 .energy-solutions {
     padding: 50px 0;
@@ -298,7 +330,6 @@ nav{
 .energy-solutions h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-
 }
 
 .solutions-container {
@@ -306,6 +337,7 @@ nav{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10%;
+    margin-top: 50px;
 }
 
 .solution-box {
@@ -316,6 +348,15 @@ nav{
     max-width: 40%;
     text-align: center;
     flex: 1;
+    position: relative; /* Til relativ positionering */
+}
+
+.solution-icon {
+    position: absolute;
+    top: -25px; /* Juster denne værdi efter behov */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Placer ikonet over tekst */
 }
 
 .solution-icon img {
@@ -325,7 +366,6 @@ nav{
 
 .solution-box h3 {
     color: #008000;
-    
     margin-bottom: 10px;
 }
 
@@ -333,7 +373,6 @@ nav{
     font-size: 1em;
     color: #666;
 }
-
 /*---------innovativeløsninger---------*/
 .innovative-solutions {
     padding: 50px 0;
@@ -345,6 +384,7 @@ nav{
     font-size: 2.5em;
     margin-bottom: 20px;
 }
+
 .innovative-container {
     display: flex;
     flex-direction: column;
@@ -359,6 +399,7 @@ nav{
     border-radius: 10px; 
     background-color: #fff; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Dropshadow-effekt */
+    position: relative; /* Til relative positionering af overlay */
 }
 
 .box2 {
@@ -369,90 +410,135 @@ nav{
     padding: 0;
     border-radius: 10px; 
     background-color: #fff; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Til relative positionering af overlay */
 }
+
 .box img {
     max-width: 40%;
     height: auto;
     border-top-left-radius: 10px ;
     border-bottom-left-radius: 10px;
 }
+
 .box2 img {
     max-width: 40%;
     height: auto;
     border-top-right-radius: 10px ;
     border-bottom-right-radius: 10px;
 }
-.box .text {
-    max-width: 50%;
-}
 
-.box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.box p {
-    font-size: 16px;
-}
+.box .text,
 .box2 .text {
     max-width: 50%;
 }
 
+.box h2,
 .box2 h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
+.box p,
 .box2 p {
-    font-size: 12px;
+    font-size: 16px;
 }
-.green-overlay2 {
+
+.green-overlay2{
     position: absolute;
-    width: 40px ;
-    height: 290px;
-    left: 505px;
+    width: 4%; /* Tilpas bredden til 10% af boksens bredde */
+    height: 100%; /* Tilpas højden til 100% af boksens højde */
     background-color: #3dcd579b; 
     z-index: 1; 
+    top: 0; /* Placer overlay øverst i boksen */
+    left: 38%;
 }
+
+/* Placer det grønne overlay til højre for billedet i box2 */
 .green-overlay3 {
     position: absolute;
-    width: 40px ;
-    height: 290px;
-    right: 505px;
+    width: 4%; /* Tilpas bredden til 10% af boksens bredde */
+    height: 100%; /* Tilpas højden til 100% af boksens højde */
     background-color: #3dcd579b; 
     z-index: 1; 
+    top: 0; /* Placer overlay øverst i boksen */
+    right: 38%;
 }
 
-/* Subscription form */
+/* Tilpas afstanden til venstre for overlay i box */
+.box .text {
+    padding-right: 10%; /* Brug 10% padding til at skabe plads til overlay */
+    margin-left: -5%; /* Anvend en negativ margin for at flytte teksten til venstre */
+}
 
-/* Subscription form */
-.subscription-section {
+/* brug for hjælp */
+.help-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 8%; /* Matching padding with the main content */
-    background-color: #F3F2F2;
+    flex-direction: row; /* Ændret fra standard 'column' til 'row' */
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3%;
+  }
+  .help-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
 }
+  
+  .help-box {
+  width: calc(20% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 180px;
+  }
+  
+  .help-box h3 {
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+  
+  .help-box p {
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+
+  .like-img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px; /* Juster størrelsen efter behov */
+    height: auto;
+}
+  
+
+/* Subscription form */
+
 
 .subscription-container {
     width: 100%;
-    text-align: center;
-    background-color: #f3f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
+
 }
 
 .subscription-container h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .subscription-container p {
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
     color: #666;
+    margin-bottom: 20px; /* Tilføjer afstand mellem afsnit */
 }
+
 
 .subscription-form {
     display: flex;
@@ -463,11 +549,11 @@ nav{
 
 .subscription-form input[type="email"],
 .subscription-form select {
-    width: 30%;
+    width: 50%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 0px solid;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #F3F2F2;
 }
 
 .subscription-form button {
@@ -484,6 +570,7 @@ nav{
     background-color: #007a2f;
 }
 
+/*--footer--*/
 footer {
     background-color: #363636;
     color: white;
