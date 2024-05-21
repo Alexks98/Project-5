@@ -4,15 +4,24 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: #F3F2F2;
+}
+/* Main content styling */
+main{
+    padding: 0 8%;
+    margin: 0 auto;
+}
+
 .header {
     min-height: 80vh;
     max-height: 100%;
     width: 100%;
-    background-image:  url(img/forside-banner.jpg) ;
+    background-image:  url(img/forside-banner-min.jpg) ;
     background-position: center;
     background-size: cover;
     position: relative;
-    background-position-y: top;   
+    background-position-y: bottom;   
 } 
 nav{
     display: flex;
@@ -206,14 +215,6 @@ nav{
     cursor: pointer;
 }
 
-body{
-    background-color: #F3F2F2;
-}
-/* Main content styling */
-main{
-    padding: 0 8%;
-    margin: 0 auto;
-}
 /* --Hvem er vi-- */
 .about-container {
     display: flex;
@@ -265,7 +266,7 @@ main{
     flex: 1;
     position: relative; /* Gør det muligt at placere den grønne boks */
     max-width: 40%; 
-    padding: 20px;
+    padding: 50px;
 }
 
 .about-image img {
@@ -279,8 +280,8 @@ main{
 
 .green-overlay {
     position: absolute;
-    bottom: -20px; /* Få boksen til at stikke ud nedenfor billedet */
-    width: 100% ;
+    bottom: 30px; /* Få boksen til at stikke ud nedenfor billedet */
+    width: 81% ;
     height: 40px;
     background-color: #3dcd579b; 
     z-index: 1; /* Lægger boksen ovenpå billedet */
@@ -311,7 +312,7 @@ main{
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 35px 20px;
     max-width: 40%;
     text-align: center;
     flex: 1;
