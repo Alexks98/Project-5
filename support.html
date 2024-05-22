@@ -33,6 +33,24 @@
         <div class="support-banner-text-box">
             <h2>SUPPORT</h2>
         </div>
+        <div class="chatbox-toggle chatbox">
+            <p>24/7 Live Chat</p>
+        </div>
+        
+        <!-- Chat box content -->
+        <div class="chatbox-content">
+            <div class="chatbox-header">
+                <h4>Live Support AI Chat</h4>
+                <button class="chatbox-close">&times;</button>
+            </div>
+            <div class="chatbox-messages">
+                <!-- Messages will go here -->
+            </div>
+            <div class="chatbox-input">
+                <input type="text" id="chat-input" placeholder="Skriv en besked...">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
     </section>
     
     <main>
@@ -101,10 +119,19 @@
                         <div class="support-option-content">
                             <h3>mySchneider</h3>
                             <p>mySchneider er din nærmeste destination, som giver adgang til alt indhold, software, værktøjer og programmer og service, inklusiv log-in, for at hjælpe dig med at administrere din virksomhed.</p>
+                            <a href="#" class="learn-more-btn">Login her <i class="fas fa-arrow-right"></i></a>
+                            
                             <h3>Find Forhandler</h3>
                             <p>Find en distributør, integrator, detailhandler eller servicepartner nær dig.</p>
+                            <div class="postcode-search">
+                                <input type="text" id="postcode" placeholder="Indtast dit postnummer">
+                                <button onclick="findDistributors()">Find</button>
+                            </div>
+                            <div id="results"></div>
+                            
                             <h3>mySchneider App</h3>
                             <p>Få adgang til services, log-katalog og offline tips fra vores hjemmeside og opnå nem adgang til vores eksperter via mySchneider-appen.</p>
+                            <a href="#" class="learn-more-btn">Download Appen Her <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="support-option">
@@ -116,14 +143,23 @@
                         <div class="support-option-content">
                             <h3>Manualer og brugervejledninger</h3>
                             <p>Slå produkt, produktnavn eller produktnummer i forhold til installationsinfo og brugervejledning.</p>
+                            <a href="#" class="learn-more-btn">læs mere <i class="fas fa-arrow-right"></i></a>
+                            
                             <h3>Software og firmware</h3>
                             <p>Slå produkt, produktnavn eller produktnummer i forhold til software og firmware.</p>
+                            <a href="#" class="learn-more-btn">læs mere <i class="fas fa-arrow-right"></i></a>
+
                             <h3>Kataloger og brochurer</h3>
                             <p>Slå produkt, produktnavn eller produktnummer i forhold til kataloger og brochurer.</p>
+                            <a href="#" class="learn-more-btn">læs mere <i class="fas fa-arrow-right"></i></a>
+
                             <h3>CAD, tegninger og kurver</h3>
                             <p>Slå produkt, produktnavn eller produktnummer i forhold til CAD, tegninger og kurver.</p>
+                            <a href="#" class="learn-more-btn">læs mere <i class="fas fa-arrow-right"></i></a>
+
                             <h3>Brand & Sikkerhed FAQ</h3>
                             <p>Læs ofte stillede spørgsmål om brand og sikkerhed.</p>
+                            <a href="#" class="learn-more-btn">læs mere <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="support-option">
@@ -135,8 +171,23 @@
                         <div class="support-option-content">
                             <h3>Find vores kontorer</h3>
                             <p>Find Schneider-kontorer rundt om i verden.</p>
+                            <select id="office-locations-select" onchange="showOfficeInfo()">
+                                <option value="" disabled selected>Vælg land</option>
+                                <option value="denmark">Danmark</option>
+                                <option value="germany">Tyskland</option>
+                                <option value="usa">USA</option>
+                                <option value="france">Frankrig</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                            <div id="office-info"></div>
+
                             <h3>Find et uddannelsescenter</h3>
                             <p>Find et uddannelsescenter i nærheden af dig.</p>
+                            <div class="postcode-search">
+                                <input type="text" id="training-postcode" placeholder="Indtast dit postnummer">
+                                <button onclick="findTrainingCenters()">Søg</button>
+                            </div>
+                            <div id="training-results"></div>
                         </div>
                     </div>
                 </div>
@@ -178,5 +229,7 @@
             </div>
         </div>
     </footer>
+    <script src="supportdrop.js"></script>
+    <script src="countrychoose.js"></script>
 </body>
 </html>

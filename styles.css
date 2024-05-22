@@ -137,8 +137,6 @@ nav{
 
 
 /*--Partners-box--*/
-
-
 .partners-box {
     background-color: #f3f2f2b9;
     height: 110px;
@@ -462,8 +460,6 @@ nav{
 }
 
 
-
-
 .green-overlay2{
     position: absolute;
     width: 4%; /* Tilpas bredden til 10% af boksens bredde */
@@ -501,8 +497,7 @@ nav{
     margin: 0 auto;
     gap: 3%;
   }
-
-  
+ 
   .help-box {
   width: calc(20% - 20px);
   background-color: #fff;
@@ -529,31 +524,23 @@ nav{
   
 
 /* Subscription form */
-
-
 .subscription-container {
     width: 100%;
     padding: 50px 0;
 
 }
-
-
-
 .subscription-container p {
    
     line-height: 1.6;
    
     margin-bottom: 20px; /* Tilføjer afstand mellem afsnit */
 }
-
-
 .subscription-form {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
 .subscription-form input[type="email"],
 .subscription-form select {
     width: 50%;
@@ -854,15 +841,16 @@ footer {
 
 
 /* Support Page Stylig */
+/* Support Page Styling */
 .header-support {
     min-height: 80vh;
     max-height: 100%;
     width: 100%;
-    background-image:  url(img/support-banner.jpg) ;
+    background-image: url(img/support-banner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    background-position-y: top;   
+    background-position-y: top;
 }
 
 .support-banner-text-box {
@@ -873,34 +861,10 @@ footer {
     text-align: center;
     color: white;
 }
+
 .support-banner-text-box h2 {
     color: white;
     font-size: 3em; /* Adjust font size as needed */
-}
-.support-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.support-btn {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ffffff;
-    color: #009530;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1.2em;
-    border-radius: 5px;
-    position: relative;
-    z-index: 1;
-}
-
-
-.support-btn:hover {
-    background-color: #009530;
-    color: #ffffff;
 }
 
 .support-content p {
@@ -949,8 +913,13 @@ footer {
 .support-option-content {
     max-height: 0;
     padding: 0 15px;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease;
     overflow: hidden;
+}
+
+.support-option-content.active {
+    max-height: 1000px; /* Adjust this value as needed */
+    padding: 15px;
 }
 
 .support-option-content h3 {
@@ -993,6 +962,34 @@ footer {
 .support-option-content button:hover {
     background-color: #007a2f;
 }
+
+.postcode-search {
+    margin-top: 10px;
+}
+
+.postcode-search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.postcode-search button {
+    padding: 5px 10px;
+    background-color: #009530;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postcode-search button:hover {
+    background-color: #007a2f;
+}
+
+#results {
+    margin-top: 10px;
+}
+
 
 
 
