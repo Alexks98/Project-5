@@ -290,32 +290,74 @@ nav {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .nav-links ul {
-        display: flex;
+    nav {
         flex-direction: column;
-        align-items: center;
+        height: auto;
     }
 
-    .banner-text-box {
-        top: 40%;
-        margin-left: 0;
-        transform: translate(-50%, -40%);
+    .nav-links {
         text-align: center;
     }
 
-    .banner-text-box h1, .banner-text-box h2 {
-        font-size: 1.5em;
-        line-height: 1.5em;
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .banner-text-box {
+        top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -35%);
+        text-align: left;
+    }
+
+    .banner-text-box h1 {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+
+    banner-text-box h2 {
+        font-size: 1.1em;
+        line-height: 0.2em;
     }
 
     .partners-box {
-        bottom: 10vh;
-        height: auto;
-        padding: 20px;
+        height: 10%;
+        padding: 2px 0px 25px 0px;
     }
 
     .grid-item {
-        padding: 10px 20px;
+        padding: 0px 15px 5px 15px;
+    }
+    .by-schneider-logo {
+        max-width: 220px;
+        margin: auto;
+        display: block;
+    }
+    
+    .lk-logo {
+        width: 150px;
+        height: auto;
+    }
+    
+    .asco-logo {
+        width: 120px;
+        height: auto;
+    }
+    
+    .apc-logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .chatbox {
+        top: 100px;
+        width: 40px;
+        height: 160px;
+    }
+
+    .chatbox-content {
+        width: 250px;
+        height: 350px;
     }
 }
 
@@ -461,18 +503,30 @@ nav {
     z-index: 1; 
 }
 @media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
+    .about-image {
+        display: none; 
     }
-
+    .about-text h1 {
+        text-align: left; 
+    }
     .about-text {
-        text-align: center; 
+        text-align: left; 
+    }
+    .about-text p {
+        text-align: left; 
+    }
+    .learn-more-btn {
+       
+        display: block; 
+        width: fit-content; 
+        margin: 0; 
+        padding: 0; 
+        text-align: left; 
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Anden CSS for mindre skærme */
     .about-image {
         display: none; 
     }
@@ -500,7 +554,7 @@ nav {
     .learn-more-btn {
        
         display: block; 
-        width: fit-content; /
+        width: fit-content; 
         margin: 0; 
         padding: 0; 
         text-align: left; 
@@ -555,6 +609,15 @@ nav {
 .solution-box p {
     margin-bottom: 0px;
     padding-bottom: 0;
+}
+@media (max-width: 768px) {
+    .solutions-container {
+        justify-content: flex-start; /* Ændrer til venstreforskydning */
+        gap: 50px; /* Mere afstand mellem boksene */
+        padding-bottom: 30px;
+    }
+
+
 }
 @media (max-width: 480px) {
     .solutions-container {
@@ -671,36 +734,37 @@ nav {
 }
 @media (max-width: 768px) {
     .innovative-container {
-        align-items: center;
+        align-items: flex-start; /* Tilpas justering af boksene */
+    }
+    
+
+    .green-overlay2{
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 37.5%; /* Tilpas venstre position */
+    }
+    .green-overlay3 {
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 57.5%; /* Tilpas venstre position */
     }
     .box,
     .box2 {
-        flex-direction: column-reverse; /* Vend om på layoutet af boksene */
-    }
-    .box img,
-    .box2 img {
-         /* Gør billederne lidt mindre end halvdelen af bredden */
-        margin-right: 0; /* Tilføj lidt afstand mellem billede og tekst */
-        margin-bottom: 0; /* Fjern margenen nedenunder billedet */
-        margin-top: 0; /* Fjern margenen ovenover billedet */
-        height: 100%;
-        width: auto;
+        flex-direction: row; 
+        padding: 10px 0;
     }
     .box .text,
     .box2 .text {
-        max-width: 80%; /* Gør teksten lidt bredere */
-        padding-left: 0; /* Fjern venstre padding */
-        text-align: left; /* Juster teksten til venstre */
+        max-width: 50%; 
+        padding: 0 5px;
     }
-    .box .text h2,
-    .box2 .text h2 {
-        margin-top: 0; /* Fjern topmargin */
-    }
-    .green-overlay2,
-    .green-overlay3 {
-        width: 80%; /* Gør overlay bredere */
-        left: 10%; /* Centrer overlay */
-        right: auto; /* Fjern højre position */
+    .box img,
+    .box2 img {
+        max-width: 40%; /* Gør billederne lidt mindre end halvdelen af bredden */
+        margin-right: 0; /* Tilføj lidt afstand mellem billede og tekst */
+        margin-bottom: 0; /* Fjern margenen nedenunder billedet */
+        margin-top: 0; /* Fjern margenen ovenover billedet */
+        height: auto;
+        
+        
     }
 }
 
@@ -860,7 +924,7 @@ nav {
 @media (max-width: 768px) {
     .help-container {
         grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;
+        gap: 60px;
         padding: 20px 0 30px 0;
     }
 }
