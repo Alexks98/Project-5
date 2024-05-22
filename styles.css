@@ -611,7 +611,7 @@ footer {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 2.5em;
     justify-content: center;
     margin-bottom: 20px;
 }
