@@ -3,16 +3,62 @@
     padding: 0 ;
     font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+    font-family: 'Arial Rounded MT Pro Light';
+    src: url('fonts/ArialRoundedMTPro-Light\ \(1\).otf') format('truetype'); /* Juster stien efter din mappestruktur */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arial MT Medium';
+    src: url(fonts/ARIALMTMEDIUM.TTF) format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arial MT Light';
+    src: url(fonts/ARIALMTLIGHT.TTF) format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
 
 body{
     background-color: #F3F2F2;
+    font-family: 'Arial Rounded MT Pro Light', sans-serif;
+    font-size: 16px; /* Standard fontstørrelse */
+    color: #333; /* Tekstfarve */
+    line-height: 1.6;
 }
 /* Main content styling */
 main{
     padding: 5vh 8%;
     margin: 0 auto;
 }
-
+h1 {
+    font-family: 'Arial Rounded MT Pro Light', sans-serif;
+    font-size: 40px;
+    color: #333;
+}
+h2{
+    font-family: 'Arial MT medium', sans-serif;
+    font-size: 40px;
+    color: #333;
+}
+h3{
+    font-family: 'Arial MT medium', sans-serif;
+    font-size: 34px
+    color: #333;
+}
+h4{
+    font-family: 'Arial MT medium', sans-serif;
+    font-size: 29px
+    color: #333; 
+}
+p {
+    font-family: 'Arial MT Light', sans-serif;
+    font-size: 1em; /* Standard paragraph fontstørrelse */
+    color: #666; /* Paragraph tekstfarve */
+}
 .header {
     min-height: 80vh;
     max-height: 100%;
@@ -73,13 +119,20 @@ nav{
     color: #009530;
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 20%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
 
-.banner-text-box p{
+.banner-text-box h1{
     color: #009530;
+    font-size: 20px;
+    line-height: 20px;
+}
+.banner-text-box h2{
+    color: #009530;
+    font-size: 50px;
+    line-height: 45px;
 }
 
 .banner-text-box h1 {
@@ -233,11 +286,7 @@ nav{
     flex: 1;
 }
 
-.about-text h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
+
 
 .about-text p {
     font-size: 1.2em;
@@ -332,10 +381,7 @@ nav{
     text-align: left;
 }
 
-.energy-solutions h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
+
 
 .solutions-container {
     display: flex;
@@ -374,20 +420,11 @@ nav{
     margin-bottom: 10px;
 }
 
-.solution-box p {
-    font-size: 1em;
-    color: #666;
-}
 /*---------innovativeløsninger---------*/
 .innovative-solutions {
     padding: 50px 0;
     background-color: #F3F2F2;
     text-align: left;
-}
-
-.innovative-solutions h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
 }
 
 .innovative-container {
@@ -438,16 +475,8 @@ nav{
     max-width: 50%;
 }
 
-.box h2,
-.box2 h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
-.box p,
-.box2 p {
-    font-size: 16px;
-}
+
 
 .green-overlay2{
     position: absolute;
@@ -486,11 +515,7 @@ nav{
     margin: 0 auto;
     gap: 3%;
   }
-  .help-container h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
+
   
   .help-box {
   width: calc(20% - 20px);
@@ -502,12 +527,7 @@ nav{
   border-radius: 10px;
   height: 180px;
   }
-  
-  .help-box h3 {
-    margin-top: 0;
-    margin-bottom: 15%;
-  }
-  
+    
   .help-box p {
     margin-bottom: 10%;
     margin-top: 5%;
@@ -531,11 +551,7 @@ nav{
 
 }
 
-.subscription-container h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
+
 
 .subscription-container p {
     font-size: 1.2em;
