@@ -36,22 +36,22 @@ main{
 }
 h1 {
     font-family: 'Arial Rounded MT Pro Light', sans-serif;
-    font-size: 40px;
+    font-size: 2em;
     color: #333;
 }
 h2{
     font-family: 'Arial MT medium', sans-serif;
-    font-size: 40px;
+    font-size: 1.5em;
     color: #333;
 }
 h3{
     font-family: 'Arial MT medium', sans-serif;
-    font-size: 34px;
+    font-size: 1.17em;
     color: #333;
 }
 h4{
     font-family: 'Arial MT medium', sans-serif;
-    font-size: 29px;
+    font-size: 1.02em;
     color: #333; 
 }
 p {
@@ -415,7 +415,10 @@ nav{
     color: #008000;
     margin-bottom: 10px;
 }
-
+.solution-box p {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
 /*---------innovativeløsninger---------*/
 .innovative-solutions {
     padding: 50px 0;
