@@ -931,6 +931,23 @@ nav {
 .subscription-form button:hover {
     background-color: #007a2f;
 }
+@media (max-width: 480px) {
+    .subscription-form {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .subscription-form input[type="email"]{
+        width: 94%; 
+    }
+    .subscription-form select {
+        width: 100%; 
+    }
+
+    .subscription-form select {
+        margin-top: 10px; 
+    }
+}
 
 /*--footer--*/
 footer {
