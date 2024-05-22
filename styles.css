@@ -36,7 +36,7 @@ main{
 }
 h1 {
     font-family: 'Arial Rounded MT Pro Light', sans-serif;
-    font-size: 2em;
+    font-size: 2.3em;
     color: #333;
 }
 h2{
@@ -51,12 +51,12 @@ h3{
 }
 h4{
     font-family: 'Arial MT medium', sans-serif;
-    font-size: 1.02em;
+    font-size: 1.12em;
     color: #333; 
 }
 p {
     font-family: 'Arial MT Light', sans-serif;
-    font-size: 1em; /* Standard paragraph fontstørrelse */
+    font-size: 1.08em; /* Standard paragraph fontstørrelse */
     color: #666; /* Paragraph tekstfarve */
 }
 .header {
