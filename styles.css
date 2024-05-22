@@ -894,12 +894,14 @@ footer {
 .support-banner-text-box {
     position: absolute;
     top: 50%;
-    left: 50px;
-    text-align: left;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 .support-banner-text-box h2 {
     color: white;
+    font-size: 3em; /* Adjust font size as needed */
 }
 .support-toggle {
     display: flex;
@@ -926,8 +928,6 @@ footer {
     background-color: #009530;
     color: #ffffff;
 }
-
-
 
 .support-content p {
     margin-bottom: 20px;
