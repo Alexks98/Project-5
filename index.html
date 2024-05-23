@@ -6,36 +6,36 @@
     <title>Projekt 5</title>
     <link rel="stylesheet" href="styles.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <script src="javascript/newsletter.js" defer></script>
     
 
 </head>
 <body>
+    
     <section class="header">
         <nav>
             <div>
                 <a href="index.html">
-                  <img src="img/se-logo.png" alt="Schneider Electric logo" class="logo">
+                  <img src="img/se-logo.png" alt="logo" class="logo">
                 </a>
             </div>
 
-            <div class="burger">
-                <i class="fas fa-bars"></i>
-            </div>
-
             <div class="nav-links" id="navLinks">
+
                     <ul>
                         <li><a href="#">Produkter</a></li>
                         <li><a href="#">Løsninger</a></li>
                         <li><a href="#">Boligejeren</a></li>
                         <li><a href="support.html">Support</a></li>
-                        <li><a href="#">Om Os</a></li>                    
+                        <li><a href="#">Om Os</a></li>
+                                             
                     </ul>
+           
             </div>
 
             <div class="icon-links">
                 <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-                <a href="#"><i class="fas fa-shopping-basket"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
             </div>
         </nav>
@@ -48,15 +48,14 @@
         </div>
 
         <div class="chatbox-toggle chatbox">
-            <p>24/7 Live Chat</p>
+            <p>24/7 Live Support AI Chat</p>
         </div>
         
         <!-- Chat box content -->
         <div class="chatbox-content">
             <div class="chatbox-header">
-                <h4 id="livechatstyle">Live Chat</h4>
+                <h4>Live Support AI Chat</h4>
                 <button class="chatbox-close">&times;</button>
-                <img src="img/chatbox-header-logo.png" alt="chatbox-header-logo" class="chatbox-headergo">
             </div>
             <div class="chatbox-messages">
                 <!-- Messages will go here -->
@@ -68,7 +67,7 @@
         </div>
     </section>
         
-        <script src="javascript/chatbox.js"></script>
+        <script src="chatbox.js"></script>
 
 <div class="container">
     <div class="partners-box">
@@ -264,6 +263,13 @@
             </form>
         </div>
 </section>
+    <!-- Pop-up boks -->
+    <div id="thank-you-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-btn">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
 
 
 
@@ -301,7 +307,5 @@
         </div>
     </div>
 </footer>
-
-    <script src="javascript/menu.js"></script>
 </body>
 </html>
