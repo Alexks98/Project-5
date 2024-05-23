@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <button class="chat-option" id="se-expert">SE Ekspert</button>
     `;
 
+
     let currentMessageIndex = 0;
 
     chatboxToggle.addEventListener('click', function() {
