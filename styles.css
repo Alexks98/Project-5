@@ -83,10 +83,11 @@ p {
 nav {
     display: flex;
     padding: 0;
+    margin: 0;
     justify-content: space-between;
     align-items: center;
     background-color: #363636;
-    height: 45px;
+    height: 50px;
 }
 
 .nav-links {
@@ -114,6 +115,8 @@ nav {
     max-width: 150px;
     height: auto;    
     align-self: baseline;
+    max-height: 100%;
+    display: block;
 }
 
 .icon-links {
@@ -1130,104 +1133,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Support Page Stylig */
 .header-support {
     min-height: 80vh;
@@ -1258,6 +1163,10 @@ footer {
     margin-bottom: 20px;
     position: relative;
 }
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
 
 .support-btn {
     padding: 10px 20px;
@@ -1285,19 +1194,15 @@ footer {
     text-align: left;
 }
 
-.support-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .support-option {
     background-color: #ffffff;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: max-height 0.3s ease;
+    margin-bottom: 15px; /* Space between boxes */
+    padding: 0; /* Remove any padding */
 }
 
 .support-option-header {
@@ -1323,9 +1228,9 @@ footer {
 
 .support-option-content {
     max-height: 0;
+    padding: 0 15px; /* Padding for content, but no bottom padding */
+    transition: max-height 0.3s ease;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 15px;
 }
 
 .support-option-content h3 {
@@ -1339,7 +1244,6 @@ footer {
 .support-option-content ul {
     list-style: disc;
     margin-left: 20px;
-    margin-bottom: 15px;
 }
 
 .support-option-content form {
@@ -1347,6 +1251,7 @@ footer {
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
+    padding-bottom: 15px;
 }
 
 .support-option-content input,
@@ -1354,8 +1259,8 @@ footer {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
-
 .support-option-content button {
     padding: 10px;
     border: none;
@@ -1368,6 +1273,3 @@ footer {
 .support-option-content button:hover {
     background-color: #007a2f;
 }
-
-
-

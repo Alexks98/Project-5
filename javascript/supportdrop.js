@@ -5,24 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     supportHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const content = header.nextElementSibling;
-            const icon = header.querySelector('i.fas');
+            const arrow = header.querySelector('.arrow'); // Only select the arrow on the right
 
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
+                arrow.classList.remove('rotate');
             } else {
                 document.querySelectorAll('.support-option-content').forEach(item => {
                     item.style.maxHeight = null;
                 });
-                document.querySelectorAll('.support-option-header i.fas').forEach(item => {
-                    item.classList.remove('fa-chevron-up');
-                    item.classList.add('fa-chevron-down');
+                document.querySelectorAll('.support-option-header .arrow').forEach(item => {
+                    item.classList.remove('rotate');
                 });
 
                 content.style.maxHeight = content.scrollHeight + "px";
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
+                arrow.classList.add('rotate');
             }
         });
     });
