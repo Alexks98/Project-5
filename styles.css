@@ -1,20 +1,23 @@
-*{
-    margin: 0 ;
-    padding: 0 ;
+* {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 @font-face {
     font-family: 'Arial Rounded MT Pro Light';
-    src: url('fonts/ArialRoundedMTPro-Light\ \(1\).otf') format('truetype'); /* Juster stien efter din mappestruktur */
+    src: url('fonts/ArialRoundedMTPro-Light (1).otf') format('truetype'); /* Juster stien efter din mappestruktur */
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Arial MT Medium';
     src: url(fonts/ARIALMTMEDIUM.TTF) format('truetype');
     font-weight: 400; /* Regular */
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Arial MT Light';
     src: url(fonts/ARIALMTLIGHT.TTF) format('truetype');
@@ -22,54 +25,62 @@
     font-style: normal;
 }
 
-body{
+body {
     background-color: #F3F2F2;
     font-family: 'Arial Rounded MT Pro Light', sans-serif;
     font-size: 16px; /* Standard fontstørrelse */
     color: #333; /* Tekstfarve */
     line-height: 1.6;
 }
+
 /* Main content styling */
-main{
+main {
     padding: 5vh 8%;
     margin: 0 auto;
 }
+
 h1 {
     font-family: 'Arial Rounded MT Pro Light', sans-serif;
     font-size: 2.3em;
     color: #000;
 }
-h2{
-    font-family: 'Arial MT medium', sans-serif;
+
+h2 {
+    font-family: 'Arial MT Medium', sans-serif;
     font-size: 1.5em;
     color: #000;
 }
-h3{
-    font-family: 'Arial MT medium', sans-serif;
+
+h3 {
+    font-family: 'Arial MT Medium', sans-serif;
     font-size: 1.17em;
     color: #000;
 }
-h4{
-    font-family: 'Arial MT medium', sans-serif;
+
+h4 {
+    font-family: 'Arial MT Medium', sans-serif;
     font-size: 1.12em;
     color: #000; 
 }
+
 p {
     font-family: 'Arial MT Light', sans-serif;
     font-size: 1.08em; 
     color: #000; 
 }
+
 .header {
     min-height: 80vh;
     max-height: 100%;
     width: 100%;
-    background-image:  url(img/forside-banner-min.jpg) ;
+    background-image: url(img/forside-banner-min.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
     background-position-y: bottom;   
-} 
-nav{
+}
+
+nav {
     display: flex;
     padding: 0;
     justify-content: space-between;
@@ -77,30 +88,34 @@ nav{
     background-color: #363636;
     height: 45px;
 }
-.nav-links{
+
+.nav-links {
     flex: 1;
     text-align: left;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 16px;
     position: relative;
-    
 }
 
-.nav-links ul li a{
+.nav-links ul li a {
     color: white;
     text-decoration: none;
 }
+
 .nav-links ul li a:hover {
     color: #3ECD58; 
 }
-.logo{
+
+.logo {
     max-width: 150px;
     height: auto;    
     align-self: baseline;
 }
+
 .icon-links {
     display: flex;
     align-items: center;
@@ -112,24 +127,27 @@ nav{
     text-decoration: none;
     margin-left: 20px;
 }
+
 .icon-links a:hover {
     color: #3ECD58; 
 }
-.banner-text-box{
+
+.banner-text-box {
     color: #009530;
     position: absolute;
     top: 50%;
     margin-left: 12em;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: left;
 }
 
-.banner-text-box h1{
+.banner-text-box h1 {
     color: #009530;
     font-size: 20px;
     line-height: 20px;
 }
-.banner-text-box h2{
+
+.banner-text-box h2 {
     color: #009530;
     font-size: 50px;
     line-height: 45px;
@@ -147,6 +165,7 @@ nav{
     transform: translateX(-50%);
     width: 100%;
 }
+
 .grid {
     display: flex;
     justify-content: center;
@@ -165,14 +184,16 @@ nav{
     display: block;
 }
 
-.lk-logo{
+.lk-logo {
     width: 250px;
     height: auto;
 }
-.asco-logo{
+
+.asco-logo {
     width: 200px;
     height: auto;
-} 
+}
+
 .apc-logo {
     width: 150px;
     height: auto;
@@ -182,7 +203,7 @@ nav{
 .chatbox {
     position: fixed;
     right: 0;
-    top: 150px; 
+    top: 150px;
     width: 50px;
     height: 200px;
     background-color: #3ECD58;
@@ -268,6 +289,150 @@ nav{
     cursor: pointer;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .banner-text-box {
+        top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -35%);
+        text-align: left;
+    }
+
+    .banner-text-box h1 {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+
+    banner-text-box h2 {
+        font-size: 1.1em;
+        line-height: 0.2em;
+    }
+
+    .partners-box {
+        height: 10%;
+        padding: 2px 0px 25px 0px;
+    }
+
+    .grid-item {
+        padding: 0px 15px 5px 15px;
+    }
+    .by-schneider-logo {
+        max-width: 220px;
+        margin: auto;
+        display: block;
+    }
+    
+    .lk-logo {
+        width: 150px;
+        height: auto;
+    }
+    
+    .asco-logo {
+        width: 120px;
+        height: auto;
+    }
+    
+    .apc-logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .chatbox {
+        top: 100px;
+        width: 40px;
+        height: 160px;
+    }
+
+    .chatbox-content {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .banner-text-box {
+        top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -35%);
+        text-align: left;
+    }
+
+    .banner-text-box h1 {
+        font-size: 0.6em;
+        line-height: 1.2em;
+    }
+
+    .banner-text-box h2 {
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    .partners-box {
+        padding: 0;
+    }
+
+    .grid-item {
+        padding: 0px 15px 5px 15px;
+    }
+    .by-schneider-logo {
+        max-width: 120px;
+        margin: auto;
+        display: block;
+    }
+    
+    .lk-logo {
+        width: 90px;
+        height: auto;
+    }
+    
+    .asco-logo {
+        width: 80px;
+        height: auto;
+    }
+    
+    .apc-logo {
+        width: 60px;
+        height: auto;
+    }
+
+    .chatbox {
+        top: 100px;
+        width: 40px;
+        height: 160px;
+    }
+
+    .chatbox-content {
+        width: 250px;
+        height: 350px;
+    }
+}
+
 /* --Hvem er vi-- */
 .about-container {
     display: flex;
@@ -337,6 +502,65 @@ nav{
     background-color: #3dcd579b; 
     z-index: 1; 
 }
+@media (max-width: 768px) {
+    .about-image {
+        display: none; 
+    }
+    .about-text h1 {
+        text-align: left; 
+    }
+    .about-text {
+        text-align: left; 
+    }
+    .about-text p {
+        text-align: left; 
+    }
+    .learn-more-btn {
+       
+        display: block; 
+        width: fit-content; 
+        margin: 0; 
+        padding: 0; 
+        text-align: left; 
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        display: none; 
+    }
+    .about-text h1 {
+        text-align: left; 
+        font-size: 20px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .about-text p {
+        text-align: left; 
+        font-size: 12px;
+    }
+
+    .learn-more-btn {
+       
+        display: block; 
+        width: fit-content; 
+        margin: 0; 
+        padding: 0; 
+        text-align: left; 
+        font-size: 10px;
+    }
+}
 /*---------------energy solution-----*/
 .energy-solutions {
     padding: 50px 0 0 0;
@@ -385,6 +609,25 @@ nav{
 .solution-box p {
     margin-bottom: 0px;
     padding-bottom: 0;
+}
+@media (max-width: 768px) {
+    .solutions-container {
+        justify-content: flex-start; /* Ændrer til venstreforskydning */
+        gap: 50px; /* Mere afstand mellem boksene */
+        padding-bottom: 30px;
+    }
+
+
+}
+@media (max-width: 480px) {
+    .solutions-container {
+        justify-content: flex-start; /* Ændrer til venstreforskydning */
+        gap: 50px; /* Mere afstand mellem boksene */
+    }
+
+    .solution-box {
+        max-width: 90%; /* Gør boksene lidt bredere */
+    }
 }
 /*---------innovativeløsninger---------*/
 .innovative-solutions {
@@ -487,7 +730,77 @@ nav{
     padding-right: 10%; 
     margin-left: -5%; 
 }
+@media (max-width: 768px) {
+    .innovative-container {
+        align-items: flex-start; /* Tilpas justering af boksene */
+    }
+    
 
+    .green-overlay2{
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 37.5%; /* Tilpas venstre position */
+    }
+    .green-overlay3 {
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 57.5%; /* Tilpas venstre position */
+    }
+    .box,
+    .box2 {
+        flex-direction: row; 
+        padding: 10px 0;
+    }
+    .box .text,
+    .box2 .text {
+        max-width: 50%; 
+        padding: 0 5px;
+    }
+    .box img,
+    .box2 img {
+        max-width: 40%; /* Gør billederne lidt mindre end halvdelen af bredden */
+        margin-right: 0; /* Tilføj lidt afstand mellem billede og tekst */
+        margin-bottom: 0; /* Fjern margenen nedenunder billedet */
+        margin-top: 0; /* Fjern margenen ovenover billedet */
+        height: auto;
+        
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .innovative-container {
+        align-items: flex-start; /* Tilpas justering af boksene */
+    }
+    
+
+    .green-overlay2{
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 37.5%; /* Tilpas venstre position */
+    }
+    .green-overlay3 {
+        width: 5%; /* Gør overlay lidt bredere */
+        left: 57.5%; /* Tilpas venstre position */
+    }
+    .box,
+    .box2 {
+        flex-direction: row; 
+        padding: 10px 0;
+    }
+    .box .text,
+    .box2 .text {
+        max-width: 50%; 
+        padding: 0 5px;
+    }
+    .box img,
+    .box2 img {
+        max-width: 40%; /* Gør billederne lidt mindre end halvdelen af bredden */
+        margin-right: 0; /* Tilføj lidt afstand mellem billede og tekst */
+        margin-bottom: 0; /* Fjern margenen nedenunder billedet */
+        margin-top: 0; /* Fjern margenen ovenover billedet */
+        height: auto;
+        
+        
+    }
+}
 
 /* samarbejdsmuligheder*/
 .samarbejds-container {
@@ -527,6 +840,42 @@ nav{
     width: calc(50% - 10px);
     align-self: center;
 }
+@media (max-width: 768px) {
+    .samarbejds-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        order: -1; /* Place image above text on smaller screens */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-button {
+        width: 100%; /* Full width buttons on very small screens */
+    }
+    .about-text h1{
+        font-size: 20px;
+    }
+
+    .button-group .action-button:nth-child(5) {
+        width: 100%; /* Full width for the last button as well */
+        align-self: center;
+    }
+}
+
 /* brug for hjælp */
 .help-container {
     display: grid;
@@ -572,12 +921,35 @@ nav{
     width: 20px;
     height: auto;
 }
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+    .help-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 60px;
+        padding: 20px 0 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 10px 0 20px 0;
+    }
+    .help-box p {
+        margin: 0;
+        padding: 0;
+    }
+}
   
 
 /* Subscription form */
 .subscription-container {
-    width: 100%;
-    padding: 50px 0;
+    padding: 5vh 8%;
+    margin: 0 auto;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .subscription-container p {
     line-height: 1.6;
@@ -588,12 +960,15 @@ nav{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* Tillader brydning af linje ved mindre skærme */
+    max-width: 1000px; /* Begrænser bredden på formularen */
+    margin: 0 auto; /* Centrerer formularen */
 }
 .subscription-form input[type="email"],
 .subscription-form select {
-    width: 50%;
+    width: 40%; /* Justeret bredde for at give mere plads til indholdet */
     padding: 10px;
-    border: 0px solid;
+    border: 1px solid #ccc; /* Tilføjet en let kant for tydelighed */
     border-radius: 5px;
     background-color: #F3F2F2;
 }
@@ -610,6 +985,23 @@ nav{
 
 .subscription-form button:hover {
     background-color: #007a2f;
+}
+@media (max-width: 480px) {
+    .subscription-form {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .subscription-form input[type="email"]{
+        width: 94%; 
+    }
+    .subscription-form select {
+        width: 100%; 
+    }
+
+    .subscription-form select {
+        margin-top: 10px; 
+    }
 }
 
 /*--footer--*/
