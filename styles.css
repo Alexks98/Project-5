@@ -88,6 +88,11 @@ nav {
     align-items: center;
     background-color: #363636;
     height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-links {
