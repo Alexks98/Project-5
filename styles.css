@@ -1323,9 +1323,9 @@ footer {
 
 .support-option-content {
     max-height: 0;
-    padding: 0 15px;
-    transition: max-height 0.3s ease;
     overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
 }
 
 .support-option-content h3 {
