@@ -1,31 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Håndter formularindsendelse
+    // Mulighed array
+    var userTypeOptions = ["Arkitekt","Building system integrator","DIY eller forhandler","E-handels pure player","El-distributør","Elektriker","Entreprenør","Husejer/forbruger","Husbyggerfirma/ejendomsudvikler", "Indretningsarkitekt","Ingeniør","Ingeniørarbejde, indkøb, bygge-og anlægsvirksomhed","Industrial system integrator","IT-distributør","IT-kanalpartner","Konsulent","Maskinbygger/OEM","Power system integrator","Slutbruger hos stort selskab","Slutbruger i små/mellemstore virksomheder","Software- ellerserviceudbyder","Solenergiinstallation","Studerende/jobsøgende","Tavlebygger"];
+
+    // Find select element
+    var userTypeSelect = document.getElementById("user-type");
+
+    // Generer og tilføj option elementer ved hjælp af et loop
+    for (let i = 0; i < userTypeOptions.length; i++) {
+        var option = document.createElement("option");
+        option.value = userTypeOptions[i].toLowerCase();
+        option.textContent = userTypeOptions[i];
+        userTypeSelect.appendChild(option);
+    }
+
     var form = document.querySelector(".subscription-form");
+    var popup = document.getElementById("thank-you-popup");
+    var closeBtn = document.getElementById("close-popup");
+    var popupMessage = document.getElementById("popup-message");
+
+    // Sørg for, at pop-up boksen er skjult ved indlæsning af siden
+    popup.style.display = "none";
+
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Forhindre faktisk indsendelse
+        event.preventDefault(); // Forhindrer formularen i at blive sendt
 
-        let email = document.getElementById("email").value;
-        let userType = document.getElementById("user-type").value;
+        // Vis pop-up boksen med takke-beskeden
+        let message = "Tak for din tilmelding!";
+        popupMessage.textContent = message;
+        popup.style.display = "flex";
 
-        if (email && userType) {
-            // Vis tak-besked i en pop-up boks
-            showThankYouPopup(email, userType);
-            
-            // Nulstil formularen efter indsendelse
-            form.reset();
-        }
+        // Ryd inputfelterne efter indsendelse
+        form.reset();
     });
 
-    // Funktion til at vise tak-besked i en pop-up boks
-    function showThankYouPopup(email, userType) {
-        var popup = document.getElementById("thank-you-popup");
-        var popupMessage = document.getElementById("popup-message");
-        popupMessage.textContent = `Tak for din tilmelding til vores nyhedsbrev med email: ${email} som ${userType}!`;
-        popup.style.display = "block";
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
 
-        var closeBtn = document.getElementById("close-popup");
-        closeBtn.addEventListener("click", function() {
+    // Luk pop-up boksen, hvis man klikker uden for indholdet
+    window.addEventListener("click", function(event) {
+        if (event.target === popup) {
             popup.style.display = "none";
-        });
-    }
+        }
+    });
 });

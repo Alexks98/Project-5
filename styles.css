@@ -957,9 +957,6 @@ nav {
   
 
 /* Subscription form */
-
-
-
 .subscription-container {
     padding: 5vh 8%;
     margin: 0 auto;
@@ -1038,7 +1035,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
-    margin: auto;
+    display: flex; /* Tilføj display flex for centering */
 }
 
 .popup-content {
@@ -1047,6 +1044,8 @@ nav {
     border-radius: 5px;
     text-align: center;
     position: relative;
+    width: 33%; /* Fyld ca. 1/3 af skærmen */
+    max-width: 500px; /* Maksimal bredde */
 }
 
 .close-btn {
@@ -1060,7 +1059,6 @@ nav {
 #popup-message {
     margin-top: 20px;
 }
-
 /*--footer--*/
 footer {
     background-color: #363636;
