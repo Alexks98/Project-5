@@ -4,12 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
     
     supportHeaders.forEach(header => {
         header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-            const arrow = header.querySelector('.arrow'); // Only select the arrow on the right
+            let content = header.nextElementSibling;
+            let arrow = header.querySelector('.arrow'); // Only select the arrow on the right
+
+            console.log('Header clicked:', header);
+            console.log('Content:', content);
+            console.log('Arrow:', arrow);
 
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 arrow.classList.remove('rotate');
+                console.log('Content hidden');
             } else {
                 document.querySelectorAll('.support-option-content').forEach(item => {
                     item.style.maxHeight = null;
@@ -20,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 content.style.maxHeight = content.scrollHeight + "px";
                 arrow.classList.add('rotate');
+                console.log('Content shown:', content.style.maxHeight);
             }
         });
     });

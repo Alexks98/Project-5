@@ -6,6 +6,8 @@
     <title>Support</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="javascript/supportdrop.js" defer></script>
+    <script src="javascript/menu.js" defer></script>
 </head>
 <body>
     <section class="header-support">
@@ -84,11 +86,11 @@
                             </ul>
                             <p>Vil du hellere skrive til os? Udfyld formularen, og vi vender tilbage til dig hurtigst muligt.</p>
                             <form>
-                                <input type="text" placeholder="Navn" required>
-                                <input type="text" placeholder="Efternavn" required>
-                                <input type="text" placeholder="Telefonnummer" required>
-                                <input type="email" placeholder="E-mail" required>
-                                <textarea placeholder="Kommentar" required></textarea>
+                                <input type="text" id="first-name" name="first-name" placeholder="Navn" required>
+                                <input type="text" id="last-name" name="last-name" placeholder="Efternavn" required>
+                                <input type="text" id="phone" name="phone" placeholder="Telefonnummer" required>
+                                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                                <textarea id="comments" name="comments" placeholder="Kommentar" required></textarea>
                                 <button type="submit">Indsend</button>
                             </form>
                         </div>
@@ -231,7 +233,5 @@
             </div>
         </div>
     </footer>
-    <script src="javascript/supportdrop.js"></script>
-    <script src="javascript/menu.js"></script>
 </body>
 </html>
