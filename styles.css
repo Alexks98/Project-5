@@ -208,6 +208,7 @@ nav {
 /* --Chatbox-- */
 body {
     font-family: Arial, sans-serif;
+    z-index: 1000;
 }
 
 .chat-container {
@@ -222,6 +223,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    z-index: 1000;
 }
 
 .chat-header {
@@ -236,35 +238,47 @@ body {
     height: 35px;
     font-size: 10px;
     position: relative;
+    z-index: 1000;
 }
+
+#live-chat-title{
+    color: white;
+    z-index: 1000;
+}
+
 
 .chat-header img.chat-icon-2 {
     width: 30px;
     height: 25px;
     margin-right: 10px;
+    z-index: 1000;
 }
 
 .chat-header h2 {
     flex-grow: 1;
     font-size: 16px;
     margin: 0;
+    z-index: 1000;
 }
 
 .symbol {
     margin-left: 10px;
     color: #ccc;
     font-size: 20px;
+    z-index: 1000;
 }
 
 .chat-body {
     flex-grow: 1;
     padding: 10px;
     overflow-y: auto;
+    z-index: 1000;
 }
 
 .message {
     margin: 10px 0;
     font-size: 14px;
+    z-index: 1000;
 }
 
 .bot-message {
@@ -274,6 +288,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .user-message {
@@ -284,6 +299,7 @@ body {
     margin: 10px 0;
     box-shadow: 0 4px 6px rgba(62, 205, 88, 0.5);
     margin-left: auto; 
+    z-index: 1000;
 }
 
 .options {
@@ -291,6 +307,7 @@ body {
     margin-top: 10px;
     width: auto;
     gap: 10px;
+    z-index: 1000;
 }
 
 .option-button {
@@ -302,24 +319,28 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .option-button:hover {
     background-color: #f1f1f1;
     border-color: #3ECD58;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .disclaimer {
     font-size: 10px;
     color: gray;
     margin-top: 10px;
+    z-index: 1000;
 }
 
 .chat-footer {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
+    z-index: 1000;
 }
 
 #userInput {
@@ -327,6 +348,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    z-index: 1000;
 }
 
 #sendButton {
@@ -337,10 +359,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
+    z-index: 1000;
 }
 
 #sendButton:disabled {
     background-color: #ccc;
+    z-index: 1000;
 }
 
 .open-button {
@@ -361,22 +385,26 @@ body {
     cursor: pointer;
     text-align: center;
     font-weight: bold;
+    z-index: 1000;
 }
 
 .open-button:hover {
     background-color: #3ECD58;
+    z-index: 1000;
 }
 
 .chat-icon {
     width: 35px;
     height: 30px;
     margin-bottom: 10px;
+    z-index: 1000;
 }
 
 .chat-icon-2 {
     width: 35px;
     height: 30px;
     margin-right: 10px;
+    z-index: 1000;
 }
 
 .close-button {
@@ -385,6 +413,7 @@ body {
     font-size: 40px;
     color: white;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .symbol-1 {
@@ -393,6 +422,7 @@ body {
     font-weight: bold;
     margin-left: 10px;
     margin-bottom: 12px;
+    z-index: 1000;
 }
 
 .symbol-2 {
@@ -402,6 +432,7 @@ body {
     margin-left: 10px;
     margin-bottom: 2px;
     margin-right: 5px;
+    z-index: 1000;
 }
 
 
