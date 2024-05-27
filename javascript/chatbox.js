@@ -1,5 +1,3 @@
-console.log("Chatbox toggled open"); // Debugging
-
 document.getElementById("openChat").addEventListener("click", function() {
     document.getElementById("chatContainer").style.display = "flex";
     document.getElementById("openChat").style.display = "none";
@@ -41,8 +39,23 @@ document.getElementById("sendButton").addEventListener("click", function() {
     }
 });
 
+//debugging and objects and variable scope (global scope)
 const user = {
     name: "Thomas",
     role: "user"
 };
-console.log(`User name: ${user.name}, User role: ${user.role}`); // Debugging
+console.log(`User name: ${user.name}, User role: ${user.role}`);
+
+//an array and variable scope (global scope)
+const automatedMessages = [
+    "Hej! Vi er her for at hjælpe dig dag.",
+    "Kunne du tænke dig at chatte med vores AI-hjælper eller en SE-ekspert?",
+    "Klik på en af knapperne nedenfor for at starte."
+];
+
+// Loop within a function
+function displayAutomatedMessages() {
+    for (const message of automatedMessages) {
+        addMessage("bot", message);
+    }
+}
