@@ -59,3 +59,27 @@ function displayAutomatedMessages() {
         addMessage("bot", message);
     }
 }
+
+
+document.getElementById('openChat').addEventListener('click', function() {
+    console.log("Open button clicked");
+    const chatContainer = document.getElementById('chatContainer');
+    chatContainer.style.display = 'flex';
+    setTimeout(() => {
+        chatContainer.classList.add('active');
+        console.log("Chat container activated");
+    }, 10); // give some time for the transition
+    this.style.display = 'none';
+    console.log("Open button hidden");
+});
+
+document.getElementById('closeChat').addEventListener('click', function() {
+    console.log("Close button clicked");
+    const chatContainer = document.getElementById('chatContainer');
+    chatContainer.classList.remove('active');
+    setTimeout(() => {
+        chatContainer.style.display = 'none';
+        document.getElementById('openChat').style.display = 'flex';
+        console.log("Chat container hidden and open button displayed");
+    }, 1); //the lower the number the faster the transition
+});
