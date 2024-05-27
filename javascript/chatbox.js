@@ -1,3 +1,5 @@
+console.log("Chatbox toggled open"); // Debugging
+
 document.getElementById("openChat").addEventListener("click", function() {
     document.getElementById("chatContainer").style.display = "flex";
     document.getElementById("openChat").style.display = "none";
@@ -38,3 +40,9 @@ document.getElementById("sendButton").addEventListener("click", function() {
         userInput.value = "";
     }
 });
+
+const user = {
+    name: "Thomas",
+    role: "user"
+};
+console.log(`User name: ${user.name}, User role: ${user.role}`); // Debugging
