@@ -2,13 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const supportHeaders = document.querySelectorAll('.support-option-header'); //the variable ddeclared with a const to save the Node list of the header elemnts//
-    //the nodelist (list of elements) is an ARRAY like and is iterated by forEach down//
-    
 
-    // forEach funktion til iteration over arrays// 
-    // Loop (forEach): Iterer over hvert element i NodeList of supportHeaders//
+    // forEach funktion//
+    // Loop (forEach)
     supportHeaders.forEach(header => {
-        // Event: Denne funktion kører, når en header klikkes//
+        // Event//
         header.addEventListener('click', () => {
             let content = header.nextElementSibling; // Variable Scope (LET)sikrer at variablerne kun er tilgængelige inden for denne specifikke blok "click function"
             let arrow = header.querySelector('.arrow'); 
@@ -18,13 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('Content:', content);
             console.log('Arrow:', arrow);
 
-            //if-else struktur til at bestemme, om indholdet skal vises eller skjules
+            //if-else struktur//
             if (content.style.maxHeight) {
-                content.style.maxHeight = null; // Operatorer = til at nulstille maxHeight til ingen værdi (closed tap)//
-                arrow.classList.remove('rotate'); //classlist is an object that can manipulae html with a method Remove//
+                content.style.maxHeight = null; // Operatorer = //
+                arrow.classList.remove('rotate'); //Object: classlist, Method: remove//
                 console.log('Content hidden');
             } else {
-                // Kontrolstruktur (loops), DOM: Hvis indholdet er skjult, skjul alt andet indhold og roter alle pile tilbage//
                 document.querySelectorAll('.support-option-content').forEach(item => {
                     item.style.maxHeight = null;
                 });
