@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Mulighed array
-    var userTypeOptions = ["Arkitekt","Building system integrator","DIY eller forhandler","E-handels pure player","El-distributør","Elektriker","Entreprenør","Husejer/forbruger","Husbyggerfirma/ejendomsudvikler", "Indretningsarkitekt","Ingeniør","Ingeniørarbejde, indkøb, bygge-og anlægsvirksomhed","Industrial system integrator","IT-distributør","IT-kanalpartner","Konsulent","Maskinbygger/OEM","Power system integrator","Slutbruger hos stort selskab","Slutbruger i små/mellemstore virksomheder","Software- ellerserviceudbyder","Solenergiinstallation","Studerende/jobsøgende","Tavlebygger"];
+    let userTypeOptions = ["Arkitekt","Building system integrator","DIY eller forhandler","E-handels pure player","El-distributør","Elektriker","Entreprenør","Husejer/forbruger","Husbyggerfirma/ejendomsudvikler", "Indretningsarkitekt","Ingeniør","Ingeniørarbejde, indkøb, bygge-og anlægsvirksomhed","Industrial system integrator","IT-distributør","IT-kanalpartner","Konsulent","Maskinbygger/OEM","Power system integrator","Slutbruger hos stort selskab","Slutbruger i små/mellemstore virksomheder","Software- ellerserviceudbyder","Solenergiinstallation","Studerende/jobsøgende","Tavlebygger"];
 
     // Find select element
-    var userTypeSelect = document.getElementById("user-type");
+    let userTypeSelect = document.getElementById("user-type");
 
     // Generer og tilføj option elementer ved hjælp af et loop
     for (let i = 0; i < userTypeOptions.length; i++) {
-        var option = document.createElement("option");
+        let option = document.createElement("option");
         option.value = userTypeOptions[i].toLowerCase();
         option.textContent = userTypeOptions[i];
         userTypeSelect.appendChild(option);
     }
 
-    var form = document.querySelector(".subscription-form");
-    var popup = document.getElementById("thank-you-popup");
-    var closeBtn = document.getElementById("close-popup");
-    var popupMessage = document.getElementById("popup-message");
+    let form = document.querySelector(".subscription-form");
+    let popup = document.getElementById("thank-you-popup");
+    let closeBtn = document.getElementById("close-popup");
+    let popupMessage = document.getElementById("popup-message");
 
     // Sørg for, at pop-up boksen er skjult ved indlæsning af siden
     popup.style.display = "none";
