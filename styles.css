@@ -209,6 +209,7 @@ nav {
 body {
     font-family: Arial, sans-serif;
     z-index: 1000;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .chat-container {
