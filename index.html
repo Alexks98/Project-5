@@ -6,10 +6,11 @@
     <title>Projekt 5</title>
     <link rel="stylesheet" href="styles.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-
+     <script src="javascript/chatbox.js" defer></script>
+     <script src="javascript/newsletter.js" defer></script>
 </head>
 <body>
+    
     <section class="header">
         <nav>
             <div>
@@ -45,28 +46,46 @@
             <h1>AUTOMATIONSLØSNINGER</h1>
         </div>
 
+                <!-- Chat box content START -->
         <div class="chatbox-toggle chatbox">
-            <p>24/7 Live Chat</p>
+            <p>24/7 Live Support AI Chat</p>
         </div>
         
         <!-- Chat box content -->
-        <div class="chatbox-content">
-            <div class="chatbox-header">
-                <h4>Live Support AI Chat</h4>
-                <button class="chatbox-close">&times;</button>
+        <body>
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-header">
+                    <img src="img/chatbox-header-logo.png" alt="Chat Icon" class="chat-icon-2">
+                    <h2 id="live-chat-title">Live Chat</h2>
+                    <span class="symbol-1">...</span>
+                    <span class="symbol-2">—</span>
+                    <button id="closeChat" class="close-button">&times;</button>
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message">Hej! Vi er her for at hjælpe dig i dag. Kunne du tænke dig at chatte med vores:</div>
+                    <div class="options">
+                        <button id="aiHelperButton" class="option-button">AI-hjælper</button>
+                        <button id="seExpertButton" class="option-button">SE Ekspert</button>
+                    </div>
+                    <div class="disclaimer">
+                        * AI er tilgængeligt hele døgnet.<br>
+                        * SE-ekspert er tilgængelig i åbningstider kl 08.00-16.00.
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="userInput" placeholder="indtast din besked..." disabled>
+                    <button id="sendButton" disabled>&#9658;</button>
+                </div>
             </div>
-            <div class="chatbox-messages">
-                <!-- Messages will go here -->
-            </div>
-            <div class="chatbox-input">
-                <input type="text" id="chat-input" placeholder="Skriv en besked...">
-                <button id="chat-send">Send</button>
-            </div>
-        </div>
-    </section>
-        
-        <script src="javascript/chatbox.js"></script>
+            <button id="openChat" class="open-button">
+                <img src="img/chatbox-header-logo.png" alt="Chat Icon" class="chat-icon">
+                <div>24/7</div>
+                <div>CHAT</div>
+            </button>
+        </body>
+                       <!-- Chat box content END -->
 
+        
 <div class="container">
     <div class="partners-box">
          
@@ -240,29 +259,29 @@
       <h3>Kontakt Salg</h3>
       <p>Start din salgsforespørgsel online, så bliver du kontaktet af en ekspert</p>
       <a href="#" class="learn-more-btn">Få mere at vide <i class="fas fa-arrow-right"></i></a>
-      <img src="path_to_your_image.jpg" alt="Like" class="like-img">
-    </div>
-  </div>
+      <img src="path_to_your_image.jpg" alt="Like" class="like-img"></div>
 </main>
 <!--subscription-->
 <section>
-        <div class="subscription-container">
-            <h1>Tilmeld dig vores nyhedsbrev</h1>
-            <p>Få tilrettet månedlige opdateringer fra Schneider Electric leveret direkte til din indbakke.</p>
-            <form class="subscription-form">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <select id="user-type" name="user-type" required>
-                    <option value="" disabled selected>Jeg er</option>
-                    <option value="customer">Customer</option>
-                    <option value="partner">Partner</option>
-                    <option value="employee">Employee</option>
-                </select>
-                <button type="submit">Indsend</button>
-            </form>
-        </div>
+    <div class="subscription-container">
+        <h1>Tilmeld dig vores nyhedsbrev</h1>
+        <p>Få tilrettet månedlige opdateringer fra Schneider Electric leveret direkte til din indbakke.</p>
+        <form class="subscription-form">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <select id="user-type" name="user-type" required>
+                <option value="" disabled selected>Jeg er</option>
+            </select>
+            <button type="submit">Indsend</button>
+        </form>
+    </div>
 </section>
-
-
+<!-- Pop-up boks -->
+<div id="thank-you-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup" class="close-btn">&times;</span>
+        <p id="popup-message"></p>
+    </div>
+</div>
 
 <footer>
     <div class="footer-container">
