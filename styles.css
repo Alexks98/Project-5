@@ -1224,7 +1224,6 @@ footer {
     height: auto;
 }
 
-
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -1306,12 +1305,6 @@ footer {
 
 
 
-
-
-
-
-
-
 /* Support Page Stylig */
 .header-support {
     min-height: 80vh;
@@ -1332,16 +1325,19 @@ footer {
     text-align: center;
     color: white;
 }
+
 .support-banner-text-box h2 {
     color: white;
     font-size: 3em; /* Adjust font size as needed */
 }
+
 .support-toggle {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
 }
+
 .rotate {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
@@ -1359,7 +1355,6 @@ footer {
     position: relative;
     z-index: 1;
 }
-
 
 .support-btn:hover {
     background-color: #009530;
