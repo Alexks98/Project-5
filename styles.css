@@ -1483,7 +1483,32 @@ footer {
     color: white;
 }
 
+.icon-links-burger a {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .icon-links a {
+        display: none;
+    }
+    .icon-links-burger {
+        display: flex;
+        font-size: 22px;
+        justify-content: right;
+        margin-right: 0.8pc;
+    }
+    
+    .icon-links-burger a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        display: inline-block;
+    }
+    
+    .icon-links-burger a:hover {
+        color: #3ECD58; 
+    }
+    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1496,7 +1521,7 @@ footer {
         right: 10px;
         background: #363636;
         border: 1px solid #ccc;
-        width: 200px; 
+        width: 170px; 
     }
 
     .nav-links ul {
@@ -1520,6 +1545,5 @@ footer {
         display: block;
     }
 }
-
 
 
