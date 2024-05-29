@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isClickInsideMenu) {
             navLinks.style.display = 'none';
         } 
-    });x
+    });
 
     // Sample debugging function
     function debugNav() {
