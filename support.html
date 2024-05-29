@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="javascript/supportdrop.js" defer></script>
     <script src="javascript/menu.js" defer></script>
+    <script src="javascript/chatbox.js" defer></script>
 </head>
 <body>
     <section class="header-support">
@@ -40,6 +41,40 @@
         <div class="support-banner-text-box">
             <h2>Support</h2>
         </div>
+
+        <!-- Chat box content START -->
+        <body>
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-header">
+                    <img src="img/chatbox-header-logo.png" alt="Chat Icon" class="chat-icon-2">
+                    <h2 id="live-chat-title">Live Chat</h2>
+                    <span class="symbol-1">...</span>
+                    <span class="symbol-2">—</span>
+                    <button id="closeChat" class="close-button">&times;</button>
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message">Hej! Vi er her for at hjælpe dig i dag. Kunne du tænke dig at chatte med vores:</div>
+                    <div class="options">
+                        <button id="aiHelperButton" class="option-button">AI-hjælper</button>
+                        <button id="seExpertButton" class="option-button">SE Ekspert</button>
+                    </div>
+                    <div class="disclaimer">
+                        * AI er tilgængeligt hele døgnet.<br>
+                        * SE-ekspert er tilgængelig i åbningstider kl 08.00-16.00.
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="userInput" placeholder="indtast din besked..." disabled>
+                    <button id="sendButton" disabled>&#9658;</button>
+                </div>
+            </div>
+            <button id="openChat" class="open-button">
+                <img src="img/chatbox-header-logo.png" alt="Chat Icon" class="chat-icon">
+                <div>24/7</div>
+                <div>CHAT</div>
+            </button>
+        </body>
+                       <!-- Chat box content END -->
     </section>
     
     <main>
@@ -125,7 +160,7 @@
                     <div class="support-option">
                         <div class="support-option-header">
                             <i class="fas fa-file-alt"></i>
-                            <p>Produktdokumentation Og Software</p>
+                            <p>Produktdokumentation & Software</p>
                             <i class="fas fa-chevron-down arrow"></i>
                         </div>
                         <div class="support-option-content">
@@ -219,3 +254,7 @@
     </footer>
 </body>
 </html>
+
+
+
+
