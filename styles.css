@@ -1216,14 +1216,13 @@ footer {
     align-items: center;
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 1px solid #4e4e4e;
+    border-bottom: none; /* Remove the bottom border */
 }
 
 .footer-logo img, .footer-logo-right img {
     max-width: 100px; /* Adjust this size as needed */
     height: auto;
 }
-
 
 .footer-links {
     display: flex;
@@ -1391,26 +1390,35 @@ footer {
     padding: 15px;
     cursor: pointer;
     background-color: #f7f7f7;
+    flex-wrap: wrap;
 }
 
 .support-option-header i {
     color: #009530;
     font-size: 1.5em;
+    margin-right: 18px;
+    flex-shrink: 0;
 }
+
 
 .support-option-header p {
     margin: 0;
     flex: 1;
     text-align: left;
-    margin-left: 15px;
+    font-size: 1em;
 }
 
+.arrow{
+    font-size: 1em;
+    flex-shrink: 0;
+}
 .support-option-content {
     max-height: 0;
     padding: 0 15px; /* Padding for content, but no bottom padding */
     transition: max-height 0.3s ease;
     overflow: hidden;
 }
+
 
 .support-option-content h3 {
     margin-top: 15px;
@@ -1452,3 +1460,59 @@ footer {
 .support-option-content button:hover {
     background-color: #007a2f;
 }
+
+
+/* Hambruger menuen */ 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger-menu i {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjust based on the height of the navbar */
+        right: 10px;
+        background: #363636;
+        border: 1px solid #ccc;
+        width: 200px; /* Adjust the width as needed */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+
+
