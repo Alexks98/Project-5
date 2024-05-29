@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.getElementById('navLinks');
     const hamburgerMenu = document.getElementById('hamburgerMenu');
 
-    // Variables and Event
-    hamburgerMenu.addEventListener('click', toggleMenu);
 
     // Function to toggle menu visibility
     function toggleMenu(event) {
@@ -17,14 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.style.display = 'flex';
         }
     }
-
     // Hide the menu when clicking outside of it
-    document.addEventListener('click', function(event) {
+    function hideMenu(event) {
         const isClickInsideMenu = navLinks.contains(event.target) || hamburgerMenu.contains(event.target);
         if (!isClickInsideMenu) {
             navLinks.style.display = 'none';
-        } 
-    });x
+        }
+}
+
+    // Check screen size and add/remove event listeners
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            hamburgerMenu.addEventListener('click', toggleMenu);
+            document.addEventListener('click', hideMenu);
+        } else {
+            hamburgerMenu.removeEventListener('click', toggleMenu);
+            document.removeEventListener('click', hideMenu);
+            navLinks.style.display = ''; // Reset the display property
+        }
+    }
+
+    // Initial check
+    checkScreenSize();
+
+    // Check screen size on resize
+    window.addEventListener('resize', checkScreenSize);
 
     // Sample debugging function
     function debugNav() {
