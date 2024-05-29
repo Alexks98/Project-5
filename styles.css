@@ -164,12 +164,12 @@ nav {
 .partners-box {
     background-color: #f3f2f2b9;
     height: 110px;
-    margin-bottom: 0px;
-    position: absolute;
-    bottom: 20vh;
+    position: absolute; /* Sørger for at den er indenfor headeren */
+    bottom: 0; /* Placerer den ved bunden af headeren */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    z-index: 900; /* Sørger for at den er under chatboksen */
 }
 
 .grid {
