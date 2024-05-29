@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Arial Rounded MT Pro Light';
-    src: url('fonts/ArialRoundedMTPro-Light (1).otf') format('truetype'); /* Juster stien efter din mappestruktur */
+    src: url('fonts/ArialRoundedMTPro-Light (1).otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,26 +14,25 @@
 @font-face {
     font-family: 'Arial MT Medium';
     src: url(fonts/ARIALMTMEDIUM.TTF) format('truetype');
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Arial MT Light';
     src: url(fonts/ARIALMTLIGHT.TTF) format('truetype');
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-style: normal;
 }
 
 body {
     background-color: #F3F2F2;
     font-family: 'Arial Rounded MT Pro Light', sans-serif;
-    font-size: 16px; /* Standard fontstørrelse */
-    color: #333; /* Tekstfarve */
+    font-size: 16px;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Main content styling */
 main {
     padding: 5vh 8%;
     margin: 0 auto;
@@ -100,8 +99,13 @@ nav {
     text-align: left;
 }
 
-.nav-links ul li {
+.nav-links ul {
+    display: flex;
+    align-items: center;
     list-style: none;
+}
+
+.nav-links ul li {
     display: inline-block;
     padding: 8px 16px;
     position: relative;
@@ -210,7 +214,8 @@ nav {
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        height: auto;
+        height: 50px;
+        align-items: flex-start;
     }
 
     .nav-links {
@@ -234,9 +239,9 @@ nav {
         line-height: 1.2em;
     }
 
-    banner-text-box h2 {
+    .banner-text-box h2 {
         font-size: 1.1em;
-        line-height: 0.2em;
+        line-height: 1.2em;
     }
 
     .partners-box {
@@ -272,7 +277,8 @@ nav {
 @media (max-width: 480px) {
     nav {
         flex-direction: column;
-        height: auto;
+        height: 50px;
+        align-items: flex-start;
     }
 
     .nav-links {
@@ -327,8 +333,6 @@ nav {
         width: 60px;
         height: auto;
     }
-
-
 }
 
 /* --Chatbox-- */
@@ -573,7 +577,7 @@ body {
 @media (max-width: 768px) {
     .chat-container {
         bottom: 10px;
-        right: 0px;
+        right: 0;
         border-radius: 10px;
         border-top-right-radius: 0; /* Pointy top right corner */
         border-bottom-right-radius: 0; /* Pointy bottom right corner */
@@ -583,7 +587,7 @@ body {
         width: 50px; /* Reduced width */
         height: 150px; /* Reduced height */
         bottom: 10px;
-        right: 10px;
+        right: 0px;
         border-radius: 10px;
         border-top-right-radius: 0; /* Pointy top right corner */
         border-bottom-right-radius: 0; /* Pointy bottom right corner */
@@ -1109,7 +1113,7 @@ body {
     .help-container {
         grid-template-columns: 1fr;
         gap: 50px;
-        padding: 10px 0 20px 0;
+        padding: 10px 0 40px 0;
     }
     .help-box p {
         margin: 0;
