@@ -9,13 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburgerMenu.addEventListener('click', toggleMenu);
 
     // Function to toggle menu visibility
-    function toggleMenu() {
+    function toggleMenu(event) {
+        event.stopPropagation(); // Prevents the event from bubbling up
         if (navLinks.style.display === 'flex') {
             navLinks.style.display = 'none';
         } else {
             navLinks.style.display = 'flex';
         }
     }
+
+    // Hide the menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = navLinks.contains(event.target) || hamburgerMenu.contains(event.target);
+        if (!isClickInsideMenu) {
+            navLinks.style.display = 'none';
+        } 
+    });x
 
     // Sample debugging function
     function debugNav() {
@@ -30,16 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < menuItems.length; i++) {
         console.log(`Menu Item ${i + 1}: ${menuItems[i]}`);
     }
-
-    // Example object
-    const navConfig = {
-        showMenu: function() {
-            navLinks.style.display = 'flex';
-        },
-        hideMenu: function() {
-            navLinks.style.display = 'none';
-        }
-    };
 
     // Example usage of the object
     hamburgerMenu.addEventListener('mouseover', navConfig.showMenu);
