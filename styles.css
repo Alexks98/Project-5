@@ -164,12 +164,12 @@ nav {
 .partners-box {
     background-color: #f3f2f2b9;
     height: 110px;
-    position: absolute; /* Sørger for at den er indenfor headeren */
-    bottom: 0; /* Placerer den ved bunden af headeren */
+    position: absolute; 
+    bottom: 0; 
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    z-index: 900; /* Sørger for at den er under chatboksen */
+    z-index: 900; 
 }
 
 .grid {
@@ -203,6 +203,132 @@ nav {
 .apc-logo {
     width: 150px;
     height: auto;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .banner-text-box {
+        top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -35%);
+        text-align: left;
+        padding-bottom: 30px;
+    }
+
+    .banner-text-box h1 {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+
+    banner-text-box h2 {
+        font-size: 1.1em;
+        line-height: 0.2em;
+    }
+
+    .partners-box {
+        height: 10%;
+        padding: 2px 0px 50px 0px;
+    }
+
+    .grid-item {
+        padding: 0px 15px 5px 15px;
+    }
+    .by-schneider-logo {
+        max-width: 220px;
+        margin: auto;
+        display: block;
+    }
+    
+    .lk-logo {
+        width: 150px;
+        height: auto;
+    }
+    
+    .asco-logo {
+        width: 120px;
+        height: auto;
+    }
+    
+    .apc-logo {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .banner-text-box {
+        top: 72%;
+        margin-left: 30%;
+        transform: translate(-50%, -35%);
+        text-align: left;
+    }
+
+    .banner-text-box h1 {
+        font-size: 0.6em;
+        line-height: 1.2em;
+    }
+
+    .banner-text-box h2 {
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    .partners-box {
+        padding: 0 0 10px 0;
+    }
+
+    .grid-item {
+        padding: 0px 15px 5px 15px;
+    }
+    .by-schneider-logo {
+        max-width: 120px;
+        margin: auto;
+        display: block;
+    }
+    
+    .lk-logo {
+        width: 90px;
+        height: auto;
+    }
+    
+    .asco-logo {
+        width: 80px;
+        height: auto;
+    }
+    
+    .apc-logo {
+        width: 60px;
+        height: auto;
+    }
+
+
 }
 
 /* --Chatbox-- */
@@ -443,151 +569,77 @@ body {
     z-index: 1000;
 }
 
-
-
-/* Media Queries for Responsive Design */
+/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
+    .chat-container {
+        bottom: 10px;
+        right: 0px;
+        border-radius: 10px;
+        border-top-right-radius: 0; /* Pointy top right corner */
+        border-bottom-right-radius: 0; /* Pointy bottom right corner */
     }
 
-    .nav-links {
-        text-align: center;
+    .open-button {
+        width: 50px; /* Reduced width */
+        height: 150px; /* Reduced height */
+        bottom: 10px;
+        right: 10px;
+        border-radius: 10px;
+        border-top-right-radius: 0; /* Pointy top right corner */
+        border-bottom-right-radius: 0; /* Pointy bottom right corner */
     }
 
-    .nav-links ul {
-        flex-direction: column;
+    .chat-header,
+    .chat-footer {
+        padding: 8px;
     }
 
-    .banner-text-box {
-        top: 60%;
-        margin-left: 30%;
-        transform: translate(-50%, -35%);
-        text-align: left;
+    .chat-header img.chat-icon-2,
+    .chat-icon {
+        width: 25px;
+        height: 25px;
     }
 
-    .banner-text-box h1 {
-        font-size: 0.9em;
-        line-height: 1.2em;
+    .chat-header h2 {
+        font-size: 14px;
     }
 
-    banner-text-box h2 {
-        font-size: 1.1em;
-        line-height: 0.2em;
+    .chat-body {
+        padding: 8px;
     }
 
-    .partners-box {
-        height: 10%;
-        padding: 2px 0px 25px 0px;
+    .message {
+        font-size: 12px;
     }
 
-    .grid-item {
-        padding: 0px 15px 5px 15px;
-    }
-    .by-schneider-logo {
-        max-width: 220px;
-        margin: auto;
-        display: block;
-    }
-    
-    .lk-logo {
-        width: 150px;
-        height: auto;
-    }
-    
-    .asco-logo {
-        width: 120px;
-        height: auto;
-    }
-    
-    .apc-logo {
-        width: 100px;
-        height: auto;
+    .bot-message,
+    .user-message {
+        width: auto;
     }
 
-    .chatbox {
-        top: 100px;
-        width: 40px;
-        height: 160px;
+    .option-button {
+        padding: 5px 10px;
+        font-size: 12px;
     }
 
-    .chatbox-content {
-        width: 250px;
-        height: 350px;
+    .disclaimer {
+        font-size: 8px;
+    }
+
+    #userInput {
+        padding: 8px;
+    }
+
+    #sendButton {
+        padding: 8px;
+        font-size: 12px;
     }
 }
 
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-    }
 
-    .nav-links {
-        text-align: center;
-    }
 
-    .nav-links ul {
-        flex-direction: column;
-    }
 
-    .banner-text-box {
-        top: 72%;
-        margin-left: 30%;
-        transform: translate(-50%, -35%);
-        text-align: left;
-    }
 
-    .banner-text-box h1 {
-        font-size: 0.6em;
-        line-height: 1.2em;
-    }
-
-    .banner-text-box h2 {
-        font-size: 1em;
-        line-height: 1em;
-    }
-
-    .partners-box {
-        padding: 0;
-    }
-
-    .grid-item {
-        padding: 0px 15px 5px 15px;
-    }
-    .by-schneider-logo {
-        max-width: 120px;
-        margin: auto;
-        display: block;
-    }
-    
-    .lk-logo {
-        width: 90px;
-        height: auto;
-    }
-    
-    .asco-logo {
-        width: 80px;
-        height: auto;
-    }
-    
-    .apc-logo {
-        width: 60px;
-        height: auto;
-    }
-
-    .chatbox {
-        top: 100px;
-        width: 40px;
-        height: 160px;
-    }
-
-    .chatbox-content {
-        width: 250px;
-        height: 350px;
-    }
-}
 
 /* --Hvem er vi-- */
 .about-container {
@@ -658,31 +710,8 @@ body {
     background-color: #3dcd579b; 
     z-index: 1; 
 }
-@media (max-width: 768px) {
-    .about-image {
-        display: none; 
-    }
-    .about-text h1 {
-        text-align: left; 
-    }
-    .about-text {
-        text-align: left; 
-    }
-    .about-text p {
-        text-align: left; 
-    }
-    .learn-more-btn {
-       
-        display: block; 
-        width: fit-content; 
-        margin: 0; 
-        padding: 0; 
-        text-align: left; 
-        font-size: 12px;
-    }
-}
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .about-image {
         display: none; 
     }
@@ -766,17 +795,11 @@ body {
     margin-bottom: 0px;
     padding-bottom: 0;
 }
+
 @media (max-width: 768px) {
     .solutions-container {
-        justify-content: flex-start; /* Ændrer til venstreforskydning */
-        gap: 50px; /* Mere afstand mellem boksene */
-        padding-bottom: 30px;
-    }
-
-
-}
-@media (max-width: 480px) {
-    .solutions-container {
+        display: flex;
+        flex-direction: column;
         justify-content: flex-start; /* Ændrer til venstreforskydning */
         gap: 50px; /* Mere afstand mellem boksene */
     }
@@ -1018,9 +1041,7 @@ body {
     .button-group {
         justify-content: center;
     }
-}
 
-@media (max-width: 480px) {
     .action-button {
         width: 100%; /* Full width buttons on very small screens */
     }
