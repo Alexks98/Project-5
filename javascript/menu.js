@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth <= 768) {
                 this.hamburgerMenu.addEventListener('click', this.toggleMenu.bind(this));
                 document.addEventListener('click', this.hideMenuOnClick.bind(this));
-                this.navLinks.addEventListener('mouseleave', this.hideMenu.bind(this));
             } else {
                 this.hamburgerMenu.removeEventListener('click', this.toggleMenu.bind(this));
                 document.removeEventListener('click', this.hideMenuOnClick.bind(this));
