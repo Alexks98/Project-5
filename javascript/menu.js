@@ -47,9 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check screen size on resize
     window.addEventListener('resize', menuManager.checkScreenSize.bind(menuManager));
 
-    // Mouseover for showing menu
-    menuManager.hamburgerMenu.addEventListener('mouseover', menuManager.showMenu.bind(menuManager));
-    menuManager.navLinks.addEventListener('mouseover', menuManager.showMenu.bind(menuManager));
+  
 
     // Sample debugging function
     function debugNav() {
