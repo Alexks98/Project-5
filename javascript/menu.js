@@ -1,68 +1,60 @@
-// javascript/supportdrop.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // DOM elements
     const navLinks = document.getElementById('navLinks');
     const hamburgerMenu = document.getElementById('hamburgerMenu');
 
-  // Function to show the menu
-  function showMenu() {
-    navLinks.style.display = 'flex';
-}
+    // Object to manage menu state and actions
+    const menuManager = {
+        navLinks,
+        hamburgerMenu,
+        isMenuVisible: false, // A state to track menu visibility
 
-// Function to hide the menu
-function hideMenu() {
-    navLinks.style.display = 'none';
-}
-
-
-    // Function to toggle menu visibility on click mobilversion
-    function toggleMenu(event) {
-        event.stopPropagation(); // Prevents the event from bubbling up
-        if (navLinks.style.display === 'flex') {
-            hideMenu();
-        } else {
-            showMenu();
+        showMenu() {
+            this.navLinks.style.display = 'flex';
+            this.isMenuVisible = true;
+        },
+        hideMenu() {
+            this.navLinks.style.display = 'none';
+            this.isMenuVisible = false;
+        },
+        toggleMenu(event) {
+            event.stopPropagation(); // Prevents the event from bubbling up
+            this.isMenuVisible ? this.hideMenu() : this.showMenu(); // Using ternary operator
+        },
+        hideMenuOnClick(event) {
+            const isClickInsideMenu = this.navLinks.contains(event.target) || this.hamburgerMenu.contains(event.target);
+            if (!isClickInsideMenu) {
+                this.hideMenu();
+            }
+        },
+        checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                this.hamburgerMenu.addEventListener('click', this.toggleMenu.bind(this));
+                document.addEventListener('click', this.hideMenuOnClick.bind(this));
+                this.navLinks.addEventListener('mouseleave', this.hideMenu.bind(this));
+            } else {
+                this.hamburgerMenu.removeEventListener('click', this.toggleMenu.bind(this));
+                document.removeEventListener('click', this.hideMenuOnClick.bind(this));
+                this.navLinks.removeEventListener('mouseleave', this.hideMenu.bind(this));
+                this.showMenu(); // Ensure menu is visible on larger screens
+            }
         }
-    }
-    // Hide the menu when clicking outside of it
-    function hideMenuOnClick(event) {
-        const isClickInsideMenu = navLinks.contains(event.target) || hamburgerMenu.contains(event.target);
-        if (!isClickInsideMenu) {
-            hideMenu();
-        }
-    }
+    };
 
-    
-    // Check screen size and add/remove event listeners
-    function checkScreenSize() {
-        if (window.innerWidth <= 768) {
-            hamburgerMenu.addEventListener('click', toggleMenu);
-            document.addEventListener('click', hideMenuOnClick);
-            navLinks.addEventListener('mouseleave', hideMenu); 
-        } else {
-            hamburgerMenu.removeEventListener('click', toggleMenu);
-            document.removeEventListener('click', hideMenuOnClick);
-            navLinks.removeEventListener('mouseleave', hideMenu);
-            showMenu(); // Ensure menu is visible on larger screens
-        }
-    }
-   
     // Initial check
-    checkScreenSize();
+    menuManager.checkScreenSize();
 
     // Check screen size on resize
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener('resize', menuManager.checkScreenSize.bind(menuManager));
 
     // Mouseover for showing menu
-    hamburgerMenu.addEventListener('mouseover', showMenu);
-    navLinks.addEventListener('mouseover', showMenu);
-    
+    menuManager.hamburgerMenu.addEventListener('mouseover', menuManager.showMenu.bind(menuManager));
+    menuManager.navLinks.addEventListener('mouseover', menuManager.showMenu.bind(menuManager));
 
     // Sample debugging function
     function debugNav() {
-        console.log('Nav Links:', navLinks);
-        console.log('Hamburger Menu:', hamburgerMenu);
+        console.log('Nav Links:', menuManager.navLinks);
+        console.log('Hamburger Menu:', menuManager.hamburgerMenu);
     }
 
     debugNav();
