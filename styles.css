@@ -1510,6 +1510,9 @@ footer {
 .support-option-header .fa-phone-alt {
     color: #42B4E6;
 }
+.support-option-header .arrow {
+    color: #42B4E6; /* Blue color for the arrow */
+}
 
 /* Hambruger menuen */ 
 .hamburger-menu {
