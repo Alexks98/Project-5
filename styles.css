@@ -1347,7 +1347,7 @@ footer {
     min-height: 80vh;
     max-height: 100%;
     width: 100%;
-    background-image:  url(img/support-banner.jpg) ;
+    background-image:  url(img/support-banner-min.jpg) ;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -1480,12 +1480,15 @@ footer {
     padding-bottom: 10px;
 }
 .support-option-content button {
-    padding: 10px;
+    padding: 8px 9px;
     border: none;
+    width: 200px;
+    font-size: 18px;
     background-color: #009530;
     color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
+    align-items: center;
 }
 
 .support-option-content button:hover {
