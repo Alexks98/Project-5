@@ -1495,6 +1495,21 @@ footer {
     background-color: #007a2f;
 }
 
+.support-option-header .fa-headset{
+    color: #42B4E6;
+}
+.support-option-header .fa-cubes {
+    color: #42B4E6;
+}
+.support-option-header .fa-shopping-cart {
+    color: #42B4E6;
+}
+.support-option-header .fa-file-alt {
+    color: #42B4E6;
+}
+.support-option-header .fa-phone-alt {
+    color: #42B4E6;
+}
 
 /* Hambruger menuen */ 
 .hamburger-menu {
@@ -1572,5 +1587,3 @@ footer {
         display: block;
     }
 }
-
-
