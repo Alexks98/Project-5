@@ -209,6 +209,7 @@
                         <div class="support-option-content">
                             <h3>Find vores kontorer</h3>
                             <p>Find Schneider-kontorer rundt om i verden. <select id="office-locations-select" onchange="showOfficeInfo()">
+                                </p>
                                 <option value="" disabled selected>Vælg land</option>
                                 <option value="denmark">Danmark</option>
                                 <option value="germany">Tyskland</option>
@@ -216,16 +217,17 @@
                                 <option value="france">Frankrig</option>
                                 <option value="france">Sveirge</option>
                                 <option value="france">Italy</option>
-                                <option value="france">Switzerland</option></p>
+                                <option value="france">Switzerland</option>
                             
                                 <!-- Add more countries as needed -->
                             </select>
                             <div id="office-info"></div>
 
                             <h3>Find et uddannelsescenter</h3>
-                            <p>Find et uddannelsescenter i nærheden af dig. <div class="postcode-search">
+                            <p>Find et uddannelsescenter i nærheden af dig. </p>
+                            <div class="postcode-search">
                                 <input type="text" id="training-postcode" placeholder="Indtast dit postnummer">
-                                <button onclick="findTrainingCenters()">Søg</button></p>
+                                <button onclick="findTrainingCenters()">Søg</button>
                             
                             </div>
                             <div id="training-results"></div>
